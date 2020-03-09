@@ -1,1 +1,2 @@
-# oo-problem-catalog
+# OO Problem Catalog
+This repository's issue tracker is used as Object Oriented Problem Catalog. Detail of how to use this will be published soon. For now, visit the issues to find the existing problems.
