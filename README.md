@@ -1,5 +1,5 @@
 # OO Problem Catalog
-This repository's [issue tracker](https://github.com/iut-cse/oo-problem-catalog/issues) is used as Object Oriented Problem Catalog. For now, visit the issues to find the existing problems.
+This repository's [issue tracker](https://github.com/iut-cse/oo-problem-catalog/issues) is used as Object Oriented Problem Catalog.
 
 # How to Use
 * Visit the [issues](https://github.com/iut-cse/oo-problem-catalog/issues) to find the existing problems
