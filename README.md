@@ -1,2 +1,9 @@
 # OO Problem Catalog
-This repository's issue tracker is used as Object Oriented Problem Catalog. Detail of how to use this will be published soon. For now, visit the issues to find the existing problems.
+This repository's [issue tracker](https://github.com/iut-cse/oo-problem-catalog/issues) is used as Object Oriented Problem Catalog. Detail of how to use this will be published soon. For now, visit the issues to find the existing problems.
+
+# How to Use
+* Visit the [issues](https://github.com/iut-cse/oo-problem-catalog/issues) to find the existing problems
+* Like the problem if you find it interesting and helpful. This will help others to easily identify good problems to solve. Also, dislike the problem if you find it uninteresting and not so good.
+* Comment about the problem. Is the description unclear? Do you think it is too easy or too difficult than what is mentioned? Comment about it.
+* Discussion about the solution is OK. But do not paste a solution. Give a link to the solution instead.
+* Do you have an interesting problem? [Post it](https://github.com/iut-cse/oo-problem-catalog/issues/new).
