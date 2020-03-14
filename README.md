@@ -14,7 +14,7 @@ This repository's [issue tracker](https://github.com/iut-cse/oo-problem-catalog/
 # How to submit a solution
 Most problems here cannot be automatically validated. Also, there is no one designated to evaluate the solutions. However, if you want to keep your solution in this repository for others to see, please maintain the following rules.
 * Create a branch with your GitHub username.
-* Create a folder at the root of the repository with your GitHub username
+* Create a folder int the `/solutions` folder with your GitHub username. If your username is `abdullah`, the folder should be `/Solutions/abdullah`.
 * Write any code in that folder
 * PUSH ONLY TO YOUR BRANCH. Pull requests to master branch will not be reviewed.
 * Mention the issue number in your commit. For example, a commit is for solving issue 1, mention #1 somewhere in the commit. It will be lincked to the problem automatically.
