@@ -9,14 +9,11 @@ assignees: ''
 
 ## Overview
 
-
 ## Example
 
 ## Assumptions
 
 ## Task
-
-## Learning goal
 
 ## Notes
 
