@@ -17,6 +17,7 @@ Most problems here cannot be automatically validated. Also, there is no one desi
 * Create a folder at the root of the repository with your GitHub username
 * Write any code in that folder
 * PUSH ONLY TO YOUR BRANCH. Pull requests to master branch will not be reviewed.
+* Mention the issue number in your commit. For example, a commit is for solving issue 1, mention #1 somewhere in the commit. It will be lincked to the problem automatically. Like this: #1, #2.
 
 # How to check other people's solutions
 Simplest way to see other people's solutions is to see their branch's code online. However, if you want to build and run their code, you should do the followings:
