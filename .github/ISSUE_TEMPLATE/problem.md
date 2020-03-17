@@ -10,6 +10,11 @@ assignees: ''
 <!-- 
 The HTML comment like this is for guidlines to editor/creator of a problem. 
 Please do not remove any such comments unless you created it.
+
+**Use Labels**
+There are five difficulty levels: very easy, easy, medium, hard, very hard. Mention exactly one that represents the difficulty level of your problem.
+There are some labels representing topics, example - Design Patterns, SOLID, refactoring and more. Use any number of such labels that is related to your problem.
+Using correct labels will help people finding the problem they need easily.
 -->
 ### Prerequisites
 <!-- 
