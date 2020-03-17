@@ -7,15 +7,55 @@ assignees: ''
 
 ---
 
+<!-- 
+The HTML comment like this is for guidlines to editor/creator of a problem. 
+Please do not remove any such comments unless you created it.
+-->
+### Prerequisites
+<!-- 
+If solving this problem requires solution of other problems beforehand, mention them here.
+Remove this section is not required.
+-->
+
 ## Overview
+<!-- 
+Give a overview of the problem.
+This section is mandatory
+-->
 
 ## Example
+<!-- 
+Give some examples of scenario for better understanding.
+Try to use specific names and numbers.
+Bad example: Age of person 1 is x
+Good example: Age of Fatema is 30 years
+
+This section is highly recommended, but not mandatory.
+-->
 
 ## Assumptions
+<!-- 
+If there are some assumption that the solver should have, mention here.
+This section is optional.
+-->
 
 ## Task
+<!-- 
+Specifically mention what to do.
+This section is mandatory.
+-->
 
 ## Notes
+<!-- 
+Is there something else you need so say? Anything!
+This section is optional.
+-->
+
+## Source
+<!-- 
+Did you collect the problem from another source? Please mention with link if possible.
+This section is optional.
+-->
 
 ---
 <!-- Leave this part as it is -->
