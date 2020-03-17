@@ -16,10 +16,12 @@ There are five difficulty levels: very easy, easy, medium, hard, very hard. Ment
 There are some labels representing topics, example - Design Patterns, SOLID, refactoring and more. Use any number of such labels that is related to your problem.
 Using correct labels will help people finding the problem they need easily.
 -->
-### Prerequisites
+### Related Problems
 <!-- 
-If solving this problem requires solution of other problems beforehand, mention them here.
-Remove this section is not required.
+Link the related problems. Specially consider the following cases:
+* Is it required/recommended to solve another problem before trying this one?
+* Is solving another problem make solving this one easy?
+* Is this a varient of another problem?
 -->
 
 ## Overview
