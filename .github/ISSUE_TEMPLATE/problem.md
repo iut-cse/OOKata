@@ -1,6 +1,6 @@
 ---
-name: Problem
-about: Template for new problem
+name: New Problem
+about: Use this template to post a new problem
 title: ''
 labels: 'Difficulty: Medium'
 assignees: ''
