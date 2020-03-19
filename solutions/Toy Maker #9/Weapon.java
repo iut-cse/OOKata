@@ -1,7 +1,15 @@
 abstract class Toy {
 
-    double height;
-    String bodyColor;
+    private double height;
+    private String bodyColor;
+    private String weapon;
+
+    public Toy(double height, String bodyColor, String weapon) {
+        this.height = height;
+        this.bodyColor = bodyColor;
+        this.weapon = weapon;
+
+    }
 
     public double getHeight() {
         return height;
@@ -11,7 +19,11 @@ abstract class Toy {
         return bodyColor;
     }
 
-    abstract void gun();
+    public String getWeapon() {
+        return weapon;
+    }
+
+    abstract void entertain();
 
     abstract void act();
 
@@ -19,15 +31,13 @@ abstract class Toy {
 
 class Bulk extends Toy {
 
-    public Bulk(double height, String bodyColor) {
-        this.bodyColor = bodyColor;
-
-        this.height = height;
+    public Bulk(double height, String bodyColor, String weapon) {
+        super(height, bodyColor, weapon);
     }
 
     @Override
-    void gun() {
-        System.out.println("Bump");
+    void entertain() {
+        System.out.println(getWeapon()+ " sounds: Bump");
     }
 
     @Override
@@ -38,14 +48,14 @@ class Bulk extends Toy {
 
 class Dogverine extends Toy {
 
-    public Dogverine(double height, String bodyColor) {
-        this.height = height;
-        this.bodyColor = bodyColor;
+    public Dogverine(double height, String bodyColor, String weapon) {
+        super(height, bodyColor, weapon);
+
     }
 
     @Override
-    void gun() {
-        System.out.println("Slash");
+    void entertain() {
+        System.out.println(getWeapon()+" sounds: Slash");
     }
 
     @Override
@@ -56,14 +66,13 @@ class Dogverine extends Toy {
 
 class WhiteShadow extends Toy {
 
-    public WhiteShadow(double height, String bodyColor) {
-        this.height = height;
-        this.bodyColor = bodyColor;
+    public WhiteShadow(double height, String bodyColor, String weapon) {
+        super(height, bodyColor, weapon);
     }
 
     @Override
-    void gun() {
-        System.out.println("Pew Pew");
+    void entertain() {
+        System.out.println(getWeapon()+" sounds: Pew Pew");
     }
 
     @Override
@@ -71,10 +80,3 @@ class WhiteShadow extends Toy {
         System.out.println("Become Invisible");
     }
 }
-
-
-
-
-
-
-
