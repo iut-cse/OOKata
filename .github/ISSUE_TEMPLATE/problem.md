@@ -1,7 +1,7 @@
 ---
 name: New Problem
 about: Use this template to post a new problem
-title: Give a nice name for the issue
+title: Give a nice name for the problem
 labels: ''
 assignees: ''
 
