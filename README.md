@@ -1,7 +1,14 @@
 # OO Problem Catalog
 This repository's [issue tracker](https://github.com/iut-cse/oo-problem-catalog/issues) is used as Object Oriented Problem Catalog.
 
-**[Read this before posting a problem](CONTRIBUTING.md)**
+### Quick Links
+* [Read this before posting a problem](CONTRIBUTING.md)
+* Problems by difficulty
+  * [Very easy](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3A%22Very+Easy%22)
+  * [Easy](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3AEasy)
+  * [Medium](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3AMedium)
+  * [Hard](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3AHard)
+  * [Very hard](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3A%22Very+Hard%22)
 
 # How to Use
 * Visit the [issues](https://github.com/iut-cse/oo-problem-catalog/issues) to find the existing problems
