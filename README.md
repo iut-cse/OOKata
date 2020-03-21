@@ -3,7 +3,8 @@ This repository's [issue tracker](https://github.com/iut-cse/oo-problem-catalog/
 
 ### Quick Links
 * [Read this before posting a problem](CONTRIBUTING.md)
-* Problems by difficulty
+* [All problems](https://github.com/iut-cse/oo-problem-catalog/issues)
+  * [Sort by popularity](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc)
   * [Very easy](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3A%22Very+Easy%22)
   * [Easy](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3AEasy)
   * [Medium](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3AMedium)
