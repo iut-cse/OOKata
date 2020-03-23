@@ -7,10 +7,10 @@ Please read this before you post a new problem or edit and existing problem or c
 * Copying problems from other sources is very much acceptable. Consider mentioning the source in that case.
 * The formatting can be done using markdown. Learn markdown [here](https://guides.github.com/features/mastering-markdown/).
 * Post a problem [here](https://github.com/iut-cse/oo-problem-catalog/issues/new?template=problem.md).
-* Check "Tips to write a good problem" below.
+* Check ["Tips to write a good problem"](#tips-to-write-a-good-problem) below.
 
 ## Editing an existing problem
-If you find a problem that needs improvement, you are welcome to edit it yourself. Follow the guidelines mentioned in "Adding a new problem".
+If you find a problem that needs improvement, you are welcome to edit it yourself. Follow the guidelines mentioned in ["Adding a new problem"](#adding-a-new-problem) above.
 
 ## Closing a problem
 Please do not delete any problem in any circumstances. Rather close it to hide from usual search result when necessary. There can be many reasons to close a problem, including the followings:
