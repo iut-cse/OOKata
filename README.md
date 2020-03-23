@@ -24,13 +24,13 @@ Most problems here cannot be automatically validated. Also, there is no one desi
    - People who gave solution to a problem can review solution of other people.
    - Anyone else who feels like checking other peoples solution.  
    Note that by review, we do not mean just leaving comment about the solution. Just asking why this problem is solved this way can be a good source of knowledge.
-   You can check the solutions online or you can build yourself. See _How to check other people's solutions_ below. 
+   You can check the solutions online or you can build yourself. See [_How to check other people's solutions_](#how-to-check-other-peoples-solutions) below. 
 
 ### Discuss about the problems
 Each of the problems has a comment thread associated with it. Use it to discuss about the problem. Discussion may include (but not limited to):
    - Ask for clarification about the problem.
    - Scope of improvement of the problem description. Better edit the problem yourself, but if you do not feel like editing, comment.
-   - Discussion about the solution is OK. **Do not paste the whole solution**. You can give a link of course. Note that if you follow the recommended way to submit a solution (described below), it will be automatically tagged with the problem.
+   - Discussion about the solution is OK. **Do not paste the whole solution**. You can give a link of course. Note that if you follow the recommended way to submit a solution ([described below](#submit-solutions)), it will be automatically tagged with the problem.
    - Suggest a different difficulty level.
    - Suggest a different topic tag.
    - Your feeling about the problem. Does the problem make you nostalgic?
