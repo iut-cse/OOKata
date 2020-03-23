@@ -36,7 +36,7 @@ Each of the problems has a comment thread associated with it. Use it to discuss 
    - Your feeling about the problem. Does the problem make you nostalgic?
    - Anything you like to discuss.
 
-### Rate and Comment the problems
+### Rate the problems
 Rating the problems will help people to identify which problems they should try. GitHub has several _reactions_, amongh which thumbs up is considered +1 and thumbs down in considered -1. These two will be considered as primary means of popularity count. But you can give additional reactions for appreciation. More than one reaction by the same user is supported.
 
 ### Submit solutions
