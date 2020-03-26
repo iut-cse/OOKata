@@ -25,10 +25,50 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="D:/Academics/3rd SEMESTER/Object Oriented Concepts II/Lab/src/TestRec.java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="JUnit.TestPerfectDate.NextDayTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Hasan-Saju" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPerfectDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hasan-Saju" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestPerfectDate" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPerfectDate.NextDayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hasan-Saju" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestPerfectDate" />
+      <option name="METHOD_NAME" value="NextDayTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestPerfectDate.NextDayTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestPerfectDate" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -56,9 +96,49 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="466" y="6" key="#Notifications" timestamp="1585202550929">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="466" y="6" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1585202550929" />
     <state x="233" y="3" key="#Project_Structure" timestamp="1585144915326">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="3" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1585144915326" />
+    <state x="93" y="93" width="1095" height="495" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1585204860635">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.680@0.0.1280.680" timestamp="1585204860635" />
+    <state x="446" y="35" key="#com.intellij.ide.util.MemberChooser" timestamp="1585202072263">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="35" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1585202072263" />
+    <state x="345" y="18" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1585204577082">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="345" y="18" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/0.0.1280.680@0.0.1280.680" timestamp="1585204577082" />
+    <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1585204876512">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585204876512" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1585206429424">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585206429424" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1585206429424">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585206429424" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1585206429424">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585206429424" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1585206429424">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585206429424" />
+    <state x="376" y="243" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585203786919">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="376" y="243" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1585203786919" />
   </component>
 </project>
