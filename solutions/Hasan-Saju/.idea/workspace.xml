@@ -35,7 +35,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="JUnit.TestPerfectDate.NextDayTest">
+  <component name="RunManager" selected="JUnit.TestPerfectDate">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Hasan-Saju" />
@@ -62,11 +62,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestPerfectDate.NextDayTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hasan-Saju" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestPerfectDate" />
+      <option name="METHOD_NAME" value="NextDayTest1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestPerfectDate" />
+        <item itemvalue="JUnit.TestPerfectDate.NextDayTest1" />
         <item itemvalue="JUnit.TestPerfectDate.NextDayTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TestPerfectDate" />
       </list>
     </recent_temporary>
   </component>
@@ -120,22 +131,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585204876512" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1585206429424">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1585207507218">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585206429424" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1585206429424">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585207507218" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1585207507218">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585206429424" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1585206429424">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585207507218" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1585207507218">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585206429424" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1585206429424">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585207507218" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1585207507218">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585206429424" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585207507218" />
     <state x="376" y="243" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585203786919">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

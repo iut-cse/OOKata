@@ -67,7 +67,7 @@ public class PerfectDate {
         if(day<10)
         {
             answer+="0";
-            temp=String.valueOf(month);
+            temp=String.valueOf(day);
             answer+=temp;
         }
         else
