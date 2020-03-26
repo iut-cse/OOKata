@@ -1,34 +1,31 @@
-public class Toy {
+public abstract class Toy {
    private int numOfLimbs;
    private String shapeOfBody;
    private String weapon;
 
-    public int getNumOfLimbs() {
-        return numOfLimbs;
+   //Constructor disi so object diei value pass korte parsi ,setter lage nai
+    public Toy(int numOfLimbs, String shapeOfBody, String weapon) {
+        this.numOfLimbs = numOfLimbs;
+        this.shapeOfBody = shapeOfBody;
+        this.weapon = weapon;
     }
 
-    public void setNumOfLimbs(int numOfLimbs) {
-        this.numOfLimbs = numOfLimbs;
+    //private kora tai onno jayga theke access korte parbo na that's why getter use korsi
+
+    public int getNumOfLimbs() {
+        return numOfLimbs;
     }
 
     public String getShapeOfBody() {
         return shapeOfBody;
     }
 
-    public void setShapeOfBody(String shapeOfBody) {
-        this.shapeOfBody = shapeOfBody;
-    }
-
     public String getWeapon() {
         return weapon;
     }
 
-    public void setWeapon(String weapon) {
-        this.weapon = weapon;
-    }
-
-    String soundOfWeapon()
-    {
-        return null;
-    }
+    abstract String soundOfWeapon();
+   // abstract void act();
+        // eita rakhle porer class gula o abstract kora lagbe
+        //mane kono ekta class a shob use na kora porjonto, tar object banaite parbo na???
 }
