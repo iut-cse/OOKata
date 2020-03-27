@@ -11,7 +11,7 @@ import { resolveReactions } from './html-resolvers/reactions-html-resolver';
 export async function load() {
     let problemList = await ProblemList.get();
     problemList = orderBy(problemList, p => p.points, "desc");
-    problemList = orderBy(problemList, 10);
+    problemList = take(problemList, 10);
 
     let columnConfigs: TableColumnConfig<Problem>[] = [
         { headerHtml: "Title", resolveHtml: rowData => resolveProblemHtml(rowData) },
