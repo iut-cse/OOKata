@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "dashboard for OO Problem Catalog",
   "scripts": {
-    "build": "webpack",
-    "build-n-watch": "webpack --watch --watch-aggregate-timeout=500 --stdin",
+    "build-d": "webpack --mode development",
+    "build-wd": "webpack --watch --watch-aggregate-timeout=500 --stdin --mode development",
+    "build-p": "webpack --mode production",
+    "build-wp": "webpack --watch --watch-aggregate-timeout=500 --stdin --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "IUT-CSE",
