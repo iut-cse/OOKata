@@ -36,27 +36,27 @@ export interface Reactions {
 
 export class Problem {
     number: number;
-    html_url: string;
+    htmlUrl: string;
     title: string;
     state: "open" | "closed";
     comments: number;
-    created_at: string;
+    createdAt: string;
     user: User;
     labels: Label;
     reactions: Reactions;
 
     constructor(issue: Issue) {
         this.number = issue.number;
-        this.html_url = issue.html_url;
+        this.htmlUrl = issue.html_url;
         this.title = issue.title;
         this.state = issue.state;
         this.comments = issue.comments;
-        this.created_at = issue.created_at;
+        this.createdAt = issue.created_at;
         this.user = issue.user;
         this.labels = issue.labels;
         this.reactions = issue.reactions;
     }
-    get votes(): number {
+    get points(): number {
         return this.reactions["+1"] - this.reactions["-1"];
     }
 }
