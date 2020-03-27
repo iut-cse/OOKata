@@ -1,7 +1,7 @@
 import * as $ from 'jquery';
 
-export class HtmlTable {
-    constructor(private columns: TableColumnConfig[],
+export class HtmlTable<TData> {
+    constructor(private columns: TableColumnConfig<TData>[],
         private data: any[]) {
     }
 
@@ -24,7 +24,7 @@ export class HtmlTable {
     }
 }
 
-export interface TableColumnConfig {
+export interface TableColumnConfig<TData> {
     headerHtml: string;
-    resolveValue: (rowData: any) => string;
+    resolveValue: (rowData: TData) => string;
 }
