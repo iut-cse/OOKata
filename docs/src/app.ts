@@ -1,5 +1,11 @@
-//import 'bootstrap';
 import './app.scss';
-import { load } from './top-problems';
+import { WidgetFactory } from './widget-factory';
 
-load();
+const widgetFactory = new WidgetFactory();
+const widgetsPromises = [
+    widgetFactory.topProblems()
+];
+
+widgetsPromises.forEach(wp => wp.then(
+    w=> w.render()
+));

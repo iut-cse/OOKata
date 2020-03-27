@@ -1,14 +1,19 @@
+import { Widget } from "./widget";
+import { TableColumnConfig } from "./table-column-config";
 import * as $ from 'jquery';
 
-export class HtmlTable<TData> {
-    constructor(private columns: TableColumnConfig<TData>[],
+export class TableWidget<TData> extends Widget {
+    constructor(
+        protected id: string,
+        protected title: string,
+        private columns: TableColumnConfig<TData>[],
         private data: any[]) {
+        super(id, title);
     }
 
-    render($container: JQuery) {
+    buildBodyContent(): string | JQuery<HTMLElement> {
         let $table = $("<table>")
-            .addClass("table table-striped table-sm table-hover")
-            .appendTo($container);
+            .addClass("table table-striped table-sm table-hover");
         let $headerRow = $("<tr>").appendTo($("<thead>").appendTo($table));
         this.columns.forEach(col => {
             $headerRow.append($("<th>").html(col.headerHtml));
@@ -22,10 +27,7 @@ export class HtmlTable<TData> {
                 $row.append($("<td>").html(content[0]));
             });
         });
-    }
-}
 
-export interface TableColumnConfig<TData> {
-    headerHtml: string;
-    resolveHtml: (rowData: TData) => JQuery;
+        return $table;
+    }
 }
