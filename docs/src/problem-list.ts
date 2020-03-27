@@ -1,6 +1,6 @@
 import 'node-fetch';
 import { Problem } from './models';
-import * as _ from 'lodash';
+import { map } from 'lodash';
 
 // TODO: Consider pagination! Are all issues coming?
 export class ProblemList {
@@ -20,7 +20,7 @@ export class ProblemList {
         }).then(res => res.json())
             .then(issues => {
                 status = "loaded";
-                let problems = _.map(issues, issue=> new Problem(issue));
+                let problems = map(issues, issue => new Problem(issue));
                 this.problemList.length = 0;
                 Array.prototype.push.apply(this.problemList, problems);
                 return this.problemList;
