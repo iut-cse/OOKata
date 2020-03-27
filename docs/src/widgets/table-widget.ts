@@ -2,12 +2,11 @@ import { Widget } from "./widget";
 import { TableColumnConfig } from "./table-column-config";
 import * as $ from 'jquery';
 
-export class TableWidget<TData> extends Widget {
+export abstract class TableWidget<TData> extends Widget<TData> {
     constructor(
         protected id: string,
         protected title: string,
-        private columns: TableColumnConfig<TData>[],
-        private data: any[]) {
+        private columns: TableColumnConfig<TData>[]) {
         super(id, title);
     }
 
@@ -20,14 +19,18 @@ export class TableWidget<TData> extends Widget {
         });
 
         let $tbody = $("<tbody>").appendTo($table);
-        this.data.forEach(rowData => {
-            let $row = $("<tr>").appendTo($tbody);
-            this.columns.forEach(col => {
-                let content = col.resolveHtml(rowData);
-                $row.append($("<td>").html(content[0]));
+        this.loadData().then(dataList => {
+            dataList.forEach(rowData => {
+                let $row = $("<tr>").appendTo($tbody);
+                this.columns.forEach(col => {
+                    let content = col.resolveHtml(rowData);
+                    $row.append($("<td>").html(content[0]));
+                });
             });
         });
 
         return $table;
     }
+
+    abstract loadData(): Promise<TData[]>;
 }

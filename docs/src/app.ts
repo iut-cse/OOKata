@@ -1,11 +1,8 @@
 import './app.scss';
-import { WidgetFactory } from './widget-factory';
+import { TopProblemsWidget } from './widgets/top-problems-widget';
 
-const widgetFactory = new WidgetFactory();
-const widgetsPromises = [
-    widgetFactory.topProblems()
+const widgets = [
+    new TopProblemsWidget()
 ];
 
-widgetsPromises.forEach(wp => wp.then(
-    w=> w.render()
-));
+widgets.forEach(w => w.render());
