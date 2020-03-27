@@ -2,4 +2,21 @@
 
 .widget-content {
     font-size: 80%;
+
+    td {
+        vertical-align: middle;
+    }
+
+    .user {
+        .avatar {
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+    }
+
+    .reaction-list {
+        .reaction {
+            margin-right: 5px;
+        }
+    }
 }

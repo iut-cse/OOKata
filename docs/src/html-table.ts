@@ -18,7 +18,8 @@ export class HtmlTable<TData> {
         this.data.forEach(rowData => {
             let $row = $("<tr>").appendTo($tbody);
             this.columns.forEach(col => {
-                $row.append($("<td>").html(col.resolveValue(rowData)));
+                let content = col.resolveHtml(rowData);
+                $row.append($("<td>").html(content[0]));
             });
         });
     }
@@ -26,5 +27,5 @@ export class HtmlTable<TData> {
 
 export interface TableColumnConfig<TData> {
     headerHtml: string;
-    resolveValue: (rowData: TData) => string;
+    resolveHtml: (rowData: TData) => JQuery;
 }
