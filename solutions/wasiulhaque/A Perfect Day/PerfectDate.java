@@ -3,7 +3,7 @@ public class PerfectDate {
     final int month;
     final int date;
 
-    public PerfectDate(int year, int month, int date){
+    public PerfectDate(int year, int month, int date) {
         this.year = year;
         this.month = month;
         this.date = date;
@@ -22,7 +22,7 @@ public class PerfectDate {
     }
 
     public String nextDay() {
-        String nextDayDate;
+        String date;
         int currentDate = getDate();
         int currentMonth = getMonth();
         int currentYear = getYear();
@@ -31,26 +31,19 @@ public class PerfectDate {
             currentDate = 1;
             currentMonth = 1;
             currentYear += 1;
-            nextDayDate = getFormattedDate(currentDate, currentMonth, currentYear);
         } else if (currentDate == 32) {
             currentDate = 1;
             currentMonth += 1;
-            nextDayDate = getFormattedDate(currentDate, currentMonth, currentYear);
         } else {
             currentDate += 1;
-            nextDayDate = getFormattedDate(currentDate, currentMonth, currentYear);
         }
 
-        return nextDayDate;
-    }
-
-    private String getFormattedDate(int currentDate, int currentMonth, int currentYear) {
-        String formattedDate;
-        if(currentDate < 9){
-            formattedDate = currentYear + "/0" + currentMonth + "/0" + currentDate;
-        } else{
-            formattedDate = currentYear + "/0" + currentMonth + "/" + currentDate;
+        if (currentDate < 10) {
+            date = currentYear + "/0" + currentMonth + "/0" + currentDate;
+        } else {
+            date = currentYear + "/0" + currentMonth + "/" + currentDate;
         }
-        return formattedDate;
+        return date;    
     }
 }
+
