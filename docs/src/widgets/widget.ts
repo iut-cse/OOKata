@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
 
-export abstract class Widget<TData> {
+export abstract class Widget {
     constructor(
         protected id: string,
         protected title: string) {
@@ -27,5 +27,4 @@ export abstract class Widget<TData> {
     }
 
     abstract buildBodyContent(): JQuery | string;
-    abstract async loadData(): Promise<TData[]>;
 }

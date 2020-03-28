@@ -2,7 +2,7 @@ import { Widget } from "./widget";
 import { TableColumnConfig } from "./table-column-config";
 import * as $ from 'jquery';
 
-export abstract class TableWidget<TData> extends Widget<TData> {
+export abstract class TableWidget<TData> extends Widget {
     constructor(
         protected id: string,
         protected title: string,
