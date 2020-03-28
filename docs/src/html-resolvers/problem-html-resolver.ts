@@ -1,4 +1,4 @@
-import { Problem } from "../models";
+import { Problem } from "../models/Problem";
 import * as $ from 'jquery';
 
 export function resolveProblemHtml(problem: Problem): JQuery {

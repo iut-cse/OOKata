@@ -1,5 +1,5 @@
 import { TableWidget } from "./table-widget";
-import { Problem } from "../models";
+import { Problem } from "../models/Problem";
 import { resolveUserHtml } from '../html-resolvers/user-html-resolver';
 import { resolveProblemHtml} from '../html-resolvers/problem-html-resolver';
 import { resolveAsText } from '../html-resolvers/simple-text-html-resolver';

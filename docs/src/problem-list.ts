@@ -1,5 +1,5 @@
 import 'node-fetch';
-import { Problem } from './models';
+import { Problem } from "./models/Problem";
 import { map } from 'lodash';
 
 // TODO: Consider pagination! Are all issues coming?

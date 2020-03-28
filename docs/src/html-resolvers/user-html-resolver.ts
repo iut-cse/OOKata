@@ -1,4 +1,4 @@
-import { User } from "../models";
+import { User } from "../models/User";
 import * as $ from 'jquery';
 
 export function resolveUserHtml(user: User) {
