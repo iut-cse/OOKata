@@ -5,7 +5,7 @@ import { resolveProblemHtml} from '../html-resolvers/problem-html-resolver';
 import { resolveAsText } from '../html-resolvers/simple-text-html-resolver';
 import { resolveReactions } from '../html-resolvers/reactions-html-resolver';
 import { orderBy, take } from "lodash";
-import { ProblemList } from "../problem-list";
+import { database } from "../database";
 
 export class TopProblemsWidget extends TableWidget<Problem> {
     constructor() {
@@ -19,8 +19,8 @@ export class TopProblemsWidget extends TableWidget<Problem> {
             ]);
     }
 
-    async loadData(){
-        let problemList = await ProblemList.get();
+    loadData(){
+        let problemList = database.problems;
         problemList = orderBy(problemList, p => p.points, "desc");
         problemList = take(problemList, 10);
         return problemList;

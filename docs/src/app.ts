@@ -1,8 +1,11 @@
 import './app.scss';
 import { TopProblemsWidget } from './widgets/top-problems-widget';
+import { database } from './database';
 
 const widgets = [
     new TopProblemsWidget()
 ];
 
-widgets.forEach(w => w.render());
+database.load().then(()=>{
+    widgets.forEach(w => w.render());
+});
