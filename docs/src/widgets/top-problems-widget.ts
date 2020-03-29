@@ -13,7 +13,7 @@ export class TopProblemsWidget extends TableWidget<Problem> {
             'Top Problems', 
             [
                 { headerHtml: "Title", resolveHtml: rowData => resolveProblemHtml(rowData) },
-                { headerHtml: "Author", resolveHtml: rowData => resolveUserHtml(rowData.user) },
+                { headerHtml: "Author", resolveHtml: rowData => resolveUserHtml(rowData.author) },
                 { headerHtml: "Points", resolveHtml: rowData => resolveAsText(rowData.points) },
                 { headerHtml: "Reactions", resolveHtml: rowData => resolveReactions(rowData.reactions) },
             ]);
