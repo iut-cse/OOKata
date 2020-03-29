@@ -1,4 +1,4 @@
-import { Reactions } from "../models/Reactions";
+import { Reactions } from "../models/raw/Reactions";
 import * as $ from 'jquery';
 
 // the names must match with Reactions class's properties

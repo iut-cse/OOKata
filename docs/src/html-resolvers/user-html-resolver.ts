@@ -1,6 +1,6 @@
-import { User } from "../models/User";
+import { User } from "../models/raw/User";
 import * as $ from 'jquery';
-import { Author } from "../models/Problem";
+import { Author } from "../models/Author";
 
 export function resolveUserHtml(user: Author) {
     let $avatar = $("<img>")

@@ -1,7 +1,8 @@
 import 'node-fetch';
-import { Problem, Author } from "./models/Problem";
+import { Problem } from "./models/Problem";
+import { Author } from "./models/Author";
 import { map, uniqBy, find } from 'lodash';
-import { Issue } from './models/Issue';
+import { Issue } from './models/raw/Issue';
 
 class Database {
     public problems: Problem[];

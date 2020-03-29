@@ -1,7 +1,7 @@
-import { Issue } from "./Issue";
-import { Label } from "./Label";
-import { User } from "./User";
-import { Reactions } from "./Reactions";
+import { Issue } from "./raw/Issue";
+import { Label } from "./raw/Label";
+import { Reactions } from "./raw/Reactions";
+import { Author } from "./Author";
 export class Problem {
     number: number;
     htmlUrl: string;
@@ -25,19 +25,5 @@ export class Problem {
     }
     get points(): number {
         return this.reactions["+1"] - this.reactions["-1"];
-    }
-}
-
-export class Author {
-    handle: string;
-    htmlUrl: string;
-    avatarUrl: string;
-    problems: Problem[];
-    constructor(user: User) {
-        this.handle = user.login;
-        this.htmlUrl = user.html_url;
-        this.avatarUrl = user.avatar_url;
-
-        this.problems = [];
     }
 }
