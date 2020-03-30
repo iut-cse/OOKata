@@ -26,4 +26,6 @@ export class Problem {
     get points(): number {
         return this.reactions["+1"] - this.reactions["-1"];
     }
+    
+    
 }
