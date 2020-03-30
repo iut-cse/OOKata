@@ -32,7 +32,7 @@ export class TopAuthorsByPointsWidget extends TableWidget<Author> {
         authorlist.forEach(element => {
             problemlist = element.problems;
             problemlist.forEach(element => {
-                points = points + element.points;
+                points = points + element.score;
                 reactions = element.reactions;
                 console.log(reactions["+1"]+element.reactions["+1"]);
             });

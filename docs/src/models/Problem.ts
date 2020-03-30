@@ -23,7 +23,7 @@ export class Problem {
         this.labels = issue.labels;
         this.reactions = issue.reactions;
     }
-    get points(): number {
+    get score(): number {
         return this.reactions["+1"] - this.reactions["-1"];
     }
     
