@@ -9,10 +9,14 @@ class Database {
     public authors: Author[];
 
     async load(): Promise<void> {
+        let headers: any = {
+            "Accept": "*/*,application/vnd.github.squirrel-girl-preview"
+        };
+        if(localStorage["token"])
+            headers["Authorization"] = `token ${localStorage["token"]}`;
+
         return fetch("https://api.github.com/repos/iut-cse/oo-problem-catalog/issues", {
-            headers: {
-                "Accept": "*/*,application/vnd.github.squirrel-girl-preview"
-            }
+            headers: headers
         }).then(res => res.json()
         ).then(issues => {
             this.process(issues);
