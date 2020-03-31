@@ -14,14 +14,14 @@ export class TopProblemsWidget extends TableWidget<Problem> {
             [
                 { headerHtml: "Title", resolveHtml: rowData => resolveProblemHtml(rowData) },
                 { headerHtml: "Author", resolveHtml: rowData => resolveUserHtml(rowData.author) },
-                { headerHtml: "Score", resolveHtml: rowData => resolveAsText(rowData.score) },
+                { headerHtml: "Score", resolveHtml: rowData => resolveAsText(rowData.reactions.score) },
                 { headerHtml: "Reactions", resolveHtml: rowData => resolveReactions(rowData.reactions) },
             ]);
     }
 
     loadData(){
         let problemList = database.problems;
-        problemList = orderBy(problemList, p => p.score, "desc");
+        problemList = orderBy(problemList, p => p.reactions.score, "desc");
         problemList = take(problemList, 10);
         return problemList;
     }

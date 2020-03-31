@@ -23,9 +23,4 @@ export class Problem {
         this.labels = issue.labels;
         this.reactions = new Reactions(issue.reactions);
     }
-    get score(): number {
-        return this.reactions["+1"] - this.reactions["-1"];
-    }
-    
-    
 }
