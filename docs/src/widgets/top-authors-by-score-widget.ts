@@ -9,17 +9,15 @@ import { Author } from "../models/author";
 import { database } from "../database";
 import { RawReactions } from "../models/raw/RawReactions";
 
-export class TopAuthorsByPointsWidget extends TableWidget<Author> {
+export class TopAuthorsByScoreWidget extends TableWidget<Author> {
     constructor() {
-        super('top-authors-by-points',
-            'Top Authors',
+        super('top-authors-by-score',
+            'Top Authors by Score',
             [
-
                 { headerHtml: "Author", resolveHtml: rowData => resolveUserHtml(rowData) },
                 { headerHtml: "Score", resolveHtml: rowData => resolveAsText(rowData.reactions.score) },
                 { headerHtml: "Total Problems", resolveHtml: rowData => resolveAsText(rowData.problems.length) },
                 { headerHtml: "Total Reactions", resolveHtml: rowData => resolveReactions(rowData.reactions) }
-
             ]);
     }
 
