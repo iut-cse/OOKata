@@ -1,8 +1,9 @@
 import 'node-fetch';
 import { Problem } from "./models/Problem";
 import { Author } from "./models/Author";
-import { map, uniqBy, find } from 'lodash';
+import { map, uniqBy, find, flatMap, keyBy, chain } from 'lodash';
 import { RawIssue } from './models/raw/RawIssue';
+import { Label } from './models/Label';
 
 class Database {
     public problems: Problem[];
@@ -12,7 +13,7 @@ class Database {
         let headers: any = {
             "Accept": "*/*,application/vnd.github.squirrel-girl-preview"
         };
-        if(localStorage["token"])
+        if (localStorage["token"])
             headers["Authorization"] = `token ${localStorage["token"]}`;
 
         return fetch("https://api.github.com/repos/iut-cse/oo-problem-catalog/issues", {
@@ -28,14 +29,25 @@ class Database {
     private process(rawIssues: RawIssue[]) {
         let rawAuthors = map(rawIssues, ri => ri.user);
         rawAuthors = uniqBy(rawAuthors, ra => ra.login);
-        this.authors = map(rawAuthors, ra=>new Author(ra));
+        this.authors = map(rawAuthors, ra => new Author(ra));
 
+        let labelMap = chain(rawIssues)
+            .flatMap(ri => ri.labels)
+            .map(rl => new Label(rl))
+            .keyBy(l => l.name)
+            .value();
 
         this.problems = map(rawIssues, ri => {
             let problem = new Problem(ri);
             problem.author = find(this.authors, author => author.handle === ri.user.login);
             problem.author.reactions.merge(problem.reactions);
             problem.author.problems.push(problem);
+
+            ri.labels.forEach(rl => {
+                let label = labelMap[rl.name];
+                label.problems.push(problem);
+                problem.labels.push(label);
+            });
 
             return problem;
         });

@@ -2,6 +2,7 @@ import { RawIssue } from "./raw/RawIssue";
 import { RawLabel } from "./raw/RawLabel";
 import { Author } from "./Author";
 import { Reactions } from "./Reactions";
+import { Label } from "./Label";
 export class Problem {
     number: number;
     htmlUrl: string;
@@ -9,7 +10,7 @@ export class Problem {
     state: "open" | "closed";
     comments: number;
     createdAt: string;
-    labels: RawLabel[];
+    labels: Label[];
     reactions: Reactions;
     author: Author;
 
@@ -20,7 +21,7 @@ export class Problem {
         this.state = issue.state;
         this.comments = issue.comments;
         this.createdAt = issue.created_at;
-        this.labels = issue.labels;
+        this.labels = [];
         this.reactions = new Reactions(issue.reactions);
     }
 }
