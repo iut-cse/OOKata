@@ -1,7 +1,7 @@
 import { Issue } from "./raw/Issue";
 import { Label } from "./raw/Label";
-import { Reactions } from "./raw/Reactions";
 import { Author } from "./Author";
+import { Reactions } from "./Reactions";
 export class Problem {
     number: number;
     htmlUrl: string;
@@ -21,7 +21,7 @@ export class Problem {
         this.comments = issue.comments;
         this.createdAt = issue.created_at;
         this.labels = issue.labels;
-        this.reactions = issue.reactions;
+        this.reactions = new Reactions(issue.reactions);
     }
     get score(): number {
         return this.reactions["+1"] - this.reactions["-1"];

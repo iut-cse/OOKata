@@ -34,6 +34,7 @@ class Database {
         this.problems = map(rawIssues, ri => {
             let problem = new Problem(ri);
             problem.author = find(this.authors, author => author.handle === ri.user.login);
+            problem.author.reactions.merge(problem.reactions);
             problem.author.problems.push(problem);
 
             return problem;

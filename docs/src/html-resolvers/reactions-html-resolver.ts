@@ -1,5 +1,5 @@
-import { Reactions } from "../models/raw/Reactions";
 import * as $ from 'jquery';
+import { Reactions } from '../models/Reactions';
 
 // the names must match with Reactions class's properties
 const reactionImages = {
