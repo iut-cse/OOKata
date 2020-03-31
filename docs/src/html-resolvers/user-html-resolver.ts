@@ -5,7 +5,7 @@ import { Author } from "../models/Author";
 export function resolveUserHtml(user: Author) {
     let $avatar = $("<img>")
         .attr("src", user.avatarUrl)
-        .attr("width", 40)
+        .attr("width", 24)
         .attr("alt", user.handle)
         .addClass("avatar");
 
@@ -16,7 +16,7 @@ export function resolveUserHtml(user: Author) {
 
     let $fullContent = $("<div>")
         .addClass("user")
-        //.append($avatar) temporarily commented
+        .append($avatar)
         .append($name);
 
     return $fullContent;
