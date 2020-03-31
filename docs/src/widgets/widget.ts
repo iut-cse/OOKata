@@ -11,6 +11,7 @@ export abstract class Widget {
             .addClass("card");
         let $header = $("<div>")
             .addClass("card-header widget-header")
+            .addClass("text-white bg-primary")
             .append(this.buildHeaderContent())
             .appendTo($widget);
 
