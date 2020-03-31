@@ -2,7 +2,7 @@ import 'node-fetch';
 import { Problem } from "./models/Problem";
 import { Author } from "./models/Author";
 import { map, uniqBy, find } from 'lodash';
-import { Issue } from './models/raw/Issue';
+import { RawIssue } from './models/raw/RawIssue';
 
 class Database {
     public problems: Problem[];
@@ -25,7 +25,7 @@ class Database {
         });
     }
 
-    private process(rawIssues: Issue[]) {
+    private process(rawIssues: RawIssue[]) {
         let rawAuthors = map(rawIssues, ri => ri.user);
         rawAuthors = uniqBy(rawAuthors, ra => ra.login);
         this.authors = map(rawAuthors, ra=>new Author(ra));

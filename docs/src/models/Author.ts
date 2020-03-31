@@ -1,4 +1,4 @@
-import { User } from "./raw/User";
+import { RawUser } from "./raw/RawUser";
 import { Problem } from "./Problem";
 import { Reactions } from "./Reactions";
 export class Author {
@@ -7,7 +7,7 @@ export class Author {
     avatarUrl: string;
     problems: Problem[];
     reactions: Reactions;
-    constructor(user: User) {
+    constructor(user: RawUser) {
         this.handle = user.login;
         this.htmlUrl = user.html_url;
         this.avatarUrl = user.avatar_url;

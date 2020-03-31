@@ -1,4 +1,4 @@
-import { User } from "../models/raw/User";
+import { RawUser } from "../models/raw/RawUser";
 import * as $ from 'jquery';
 import { Author } from "../models/Author";
 

@@ -1,5 +1,5 @@
-import { Issue } from "./raw/Issue";
-import { Label } from "./raw/Label";
+import { RawIssue } from "./raw/RawIssue";
+import { RawLabel } from "./raw/RawLabel";
 import { Author } from "./Author";
 import { Reactions } from "./Reactions";
 export class Problem {
@@ -9,11 +9,11 @@ export class Problem {
     state: "open" | "closed";
     comments: number;
     createdAt: string;
-    labels: Label;
+    labels: RawLabel[];
     reactions: Reactions;
     author: Author;
 
-    constructor(issue: Issue) {
+    constructor(issue: RawIssue) {
         this.number = issue.number;
         this.htmlUrl = issue.html_url;
         this.title = issue.title;

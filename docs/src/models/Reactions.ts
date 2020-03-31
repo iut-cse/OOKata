@@ -1,4 +1,4 @@
-import { Reactions as RawReactions } from 'raw/Reactions'
+import { RawReactions } from './raw/RawReactions'
 
 const reactionKeys = [
     "+1",
