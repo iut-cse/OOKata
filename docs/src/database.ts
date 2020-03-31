@@ -1,13 +1,14 @@
 import 'node-fetch';
 import { Problem } from "./models/Problem";
 import { Author } from "./models/Author";
-import { map, uniqBy, find, flatMap, keyBy, chain } from 'lodash';
+import { map, uniqBy, find, flatMap, keyBy, chain, values } from 'lodash';
 import { RawIssue } from './models/raw/RawIssue';
 import { Label } from './models/Label';
 
 class Database {
     public problems: Problem[];
     public authors: Author[];
+    public labels: Label[];
 
     async load(): Promise<void> {
         let headers: any = {
@@ -27,19 +28,26 @@ class Database {
     }
 
     private process(rawIssues: RawIssue[]) {
-        let rawAuthors = map(rawIssues, ri => ri.user);
-        rawAuthors = uniqBy(rawAuthors, ra => ra.login);
-        this.authors = map(rawAuthors, ra => new Author(ra));
-
-        let labelMap = chain(rawIssues)
-            .flatMap(ri => ri.labels)
-            .map(rl => new Label(rl))
-            .keyBy(l => l.name)
+        this.authors = chain(rawIssues)
+            .map(ri => ri.user)
+            .uniqBy(ri => ri.login)
+            .map(ru => new Author(ru))
             .value();
+
+        this.labels = chain(rawIssues)
+            .flatMap(ri => ri.labels)
+            .uniqBy(ri => ri.name)
+            .map(rl => new Label(rl))
+            .value();
+
+        this.problems = map(rawIssues, ri => new Problem(ri));
+
+        let authorMap = keyBy(this.authors, a => a.handle);
+        let labelMap = keyBy(this.labels, l => l.name);
 
         this.problems = map(rawIssues, ri => {
             let problem = new Problem(ri);
-            problem.author = find(this.authors, author => author.handle === ri.user.login);
+            problem.author = authorMap[ri.user.login];
             problem.author.reactions.merge(problem.reactions);
             problem.author.problems.push(problem);
 
