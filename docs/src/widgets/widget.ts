@@ -8,7 +8,8 @@ export abstract class Widget {
 
     render() {
         let $widget = $("<div>")
-            .addClass("card");
+            .addClass("card")
+            .addClass("border-primary");
         let $header = $("<div>")
             .addClass("card-header widget-header")
             .addClass("text-white bg-primary")
