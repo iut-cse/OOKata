@@ -1,11 +1,15 @@
 import './app.scss';
-import { WidgetFactory } from './widget-factory';
+import { TopProblemsWidget } from './widgets/top-problems-widget';
+import { database } from './database';
+import { TopAuthorsByScoreWidget } from './widgets/top-authors-by-score-widget';
+import { TopAuthorsByProblemCountWidget } from './widgets/top-authors-by-problem-count-widget';
 
-const widgetFactory = new WidgetFactory();
-const widgetsPromises = [
-    widgetFactory.topProblems()
+const widgets = [
+    new TopProblemsWidget(),
+    new TopAuthorsByScoreWidget(),
+    new TopAuthorsByProblemCountWidget(),
 ];
 
-widgetsPromises.forEach(wp => wp.then(
-    w=> w.render()
-));
+database.load().then(()=>{
+    widgets.forEach(w => w.render());
+});

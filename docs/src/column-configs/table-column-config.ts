@@ -1,4 +1,6 @@
+
 export interface TableColumnConfig<TData> {
     headerHtml: string;
-    resolveHtml: (rowData: TData) => JQuery;
+    resolveHtml: (rowData: TData, index?: number) => JQuery;
 }
+

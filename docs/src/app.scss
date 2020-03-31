@@ -1,3 +1,4 @@
+@import "styles/variables.simplex"; // custom theme variables
 /*
  * Bootstrap is partially loaded to reduce bundle size.
  * Please do not remove the commented imports
@@ -38,19 +39,19 @@
 //@import "~bootstrap/scss/popover";
 //@import "~bootstrap/scss/carousel";
 //@import "~bootstrap/scss/spinners";
-//@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/utilities";
 //@import "~bootstrap/scss/print";
 
-.widget-content {
-    font-size: 80%;
+@import "styles/bootswatch.simplex"; // custom theme
 
+.widget-content {
     td {
         vertical-align: middle;
     }
 
     .user {
         .avatar {
-            border-radius: 3px;
+            border-radius: 50%;
             margin-right: 5px;
         }
     }

@@ -1,21 +1,22 @@
-import { User } from "../models";
+import { RawUser } from "../models/raw/RawUser";
 import * as $ from 'jquery';
+import { Author } from "../models/Author";
 
-export function resolveUserHtml(user: User) {
+export function resolveUserHtml(user: Author) {
     let $avatar = $("<img>")
-        .attr("src", user.avatar_url)
-        .attr("width", 40)
-        .attr("alt", user.login)
+        .attr("src", user.avatarUrl)
+        .attr("width", 24)
+        .attr("alt", user.handle)
         .addClass("avatar");
 
     let $name = $("<a>")
-        .attr("href", user.html_url)
+        .attr("href", user.htmlUrl)
         .attr("target", "blank")
-        .html(user.login);
+        .html(user.handle);
 
     let $fullContent = $("<div>")
         .addClass("user")
-        //.append($avatar) temporarily commented
+        .append($avatar)
         .append($name);
 
     return $fullContent;
