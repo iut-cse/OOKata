@@ -6,12 +6,14 @@ import { resolveAsText } from '../html-resolvers/simple-text-html-resolver';
 import { resolveReactions } from '../html-resolvers/reactions-html-resolver';
 import { orderBy, take } from "lodash";
 import { database } from "../database";
+import { RankColumnConfig } from "../column-configs/rank-column-config";
 
 export class TopProblemsWidget extends TableWidget<Problem> {
     constructor() {
         super('top-problems',
             'Top Problems', 
             [
+                new RankColumnConfig(),
                 { headerHtml: "Title", resolveHtml: rowData => resolveProblemHtml(rowData) },
                 { headerHtml: "Author", resolveHtml: rowData => resolveUserHtml(rowData.author) },
                 { headerHtml: "Score", resolveHtml: rowData => resolveAsText(rowData.reactions.score) },

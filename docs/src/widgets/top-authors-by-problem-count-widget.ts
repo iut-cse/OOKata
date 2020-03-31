@@ -7,12 +7,14 @@ import { resolveReactions } from '../html-resolvers/reactions-html-resolver';
 import { orderBy, take, sortBy, includes, groupBy, keyBy, partition, countBy, uniqBy, reduce } from "lodash";
 import { Author } from "../models/author";
 import { database } from "../database";
+import { RankColumnConfig } from "../column-configs/rank-column-config";
 
 export class TopAuthorsByProblemCountWidget extends TableWidget<Author> {
     constructor() {
         super('top-authors-by-problem-count',
             'Top Authors by Problem Count',
             [
+                new RankColumnConfig(),
                 { headerHtml: "Author", resolveHtml: rowData => resolveUserHtml(rowData) },
                 { headerHtml: "Total Problems", resolveHtml: rowData => resolveAsText(rowData.problems.length) },
                 { headerHtml: "Score", resolveHtml: rowData => resolveAsText(rowData.reactions.score) },

@@ -1,5 +1,5 @@
 import { Widget } from "./widget";
-import { TableColumnConfig } from "./table-column-config";
+import { TableColumnConfig } from "../column-configs/table-column-config";
 import * as $ from 'jquery';
 
 export abstract class TableWidget<TData> extends Widget {
@@ -20,10 +20,10 @@ export abstract class TableWidget<TData> extends Widget {
 
         let $tbody = $("<tbody>").appendTo($table);
         let dataList = this.loadData();
-        dataList.forEach(rowData => {
+        dataList.forEach((rowData, rowIndex) => {
             let $row = $("<tr>").appendTo($tbody);
-            this.columns.forEach(col => {
-                let content = col.resolveHtml(rowData);
+            this.columns.forEach((col) => {
+                let content = col.resolveHtml(rowData, rowIndex);
                 $row.append($("<td>").append(content));
             });
         });

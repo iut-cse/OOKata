@@ -8,12 +8,14 @@ import { orderBy, take, sortBy, includes, groupBy, keyBy, partition, countBy, un
 import { Author } from "../models/author";
 import { database } from "../database";
 import { RawReactions } from "../models/raw/RawReactions";
+import { RankColumnConfig } from "../column-configs/rank-column-config";
 
 export class TopAuthorsByScoreWidget extends TableWidget<Author> {
     constructor() {
         super('top-authors-by-score',
             'Top Authors by Score',
             [
+                new RankColumnConfig(),
                 { headerHtml: "Author", resolveHtml: rowData => resolveUserHtml(rowData) },
                 { headerHtml: "Score", resolveHtml: rowData => resolveAsText(rowData.reactions.score) },
                 { headerHtml: "Total Problems", resolveHtml: rowData => resolveAsText(rowData.problems.length) },
