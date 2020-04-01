@@ -17,7 +17,7 @@ class Database {
         if (localStorage["token"])
             headers["Authorization"] = `token ${localStorage["token"]}`;
 
-        return fetch("https://api.github.com/repos/iut-cse/oo-problem-catalog/issues", {
+        return fetch("https://api.github.com/repos/iut-cse/oo-kata/issues", {
             headers: headers
         }).then(res => res.json()
         ).then(issues => {
