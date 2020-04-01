@@ -1,9 +1,9 @@
 import './app.scss';
-import { TopProblemsWidget } from './widgets/top-problems-widget';
-import { database } from './database';
-import { TopAuthorsByScoreWidget } from './widgets/top-authors-by-score-widget';
-import { TopAuthorsByProblemCountWidget } from './widgets/top-authors-by-problem-count-widget';
-import { TopLabelsWidget } from './widgets/top-labels-widget';
+import { TopProblemsWidget } from "./widgets/TopProblemsWidget";
+import { database } from './Database';
+import { TopAuthorsByScoreWidget } from "./widgets/TopAuthorsByScoreWidget";
+import { TopAuthorsByProblemCountWidget } from "./widgets/TopAuthorsByProblemCountWidget";
+import { TopLabelsWidget } from "./widgets/TopLabelsWidget";
 
 const widgets = [
     new TopProblemsWidget(),
