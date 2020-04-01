@@ -3,8 +3,8 @@ import { Reactions } from '../models/Reactions';
 
 // the names must match with Reactions class's properties
 const reactionImages = {
-    "+1": "👍",
-    "-1": "👎",
+    thumbsUp: "👍",
+    thumbsDown: "👎",
     laugh: "😄",
     hooray: "🎉",
     confused: "😕",

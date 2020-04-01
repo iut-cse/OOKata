@@ -7,7 +7,7 @@ import { resolveReactions } from '../html-resolvers/reactions-html-resolver';
 import { orderBy, take, sortBy, includes, groupBy, keyBy, partition, countBy, uniqBy, reduce } from "lodash";
 import { Author } from "../models/author";
 import { database } from "../database";
-import { RawReactions } from "../models/raw/RawReactions";
+import { RawReaction } from "../models/raw/RawReactions";
 import { RankColumnConfig } from "../column-configs/rank-column-config";
 
 export class TopAuthorsByScoreWidget extends TableWidget<Author> {

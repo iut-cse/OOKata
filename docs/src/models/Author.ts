@@ -9,9 +9,9 @@ export class Author {
     reactions: Reactions;
     constructor(user: RawUser) {
         this.handle = user.login;
-        this.htmlUrl = user.html_url;
-        this.avatarUrl = user.avatar_url;
+        this.htmlUrl = user.url;
+        this.avatarUrl = user.avatarUrl;
         this.problems = [];
-        this.reactions = new Reactions();
+        this.reactions = new Reactions([]);
     }
 }

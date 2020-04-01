@@ -5,7 +5,7 @@ export class Label {
     name: string;
     color: string;
     description: string;
-
+    problemNumbers: number[];
     problems: Problem[];
 
     constructor(rawLabel: RawLabel) {

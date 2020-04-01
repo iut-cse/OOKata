@@ -12,6 +12,6 @@ const widgets = [
     new TopLabelsWidget(),
 ];
 
-database.load().then(()=>{
+database.loadByGraphQL().then(()=>{
     widgets.forEach(w => w.render());
 });
