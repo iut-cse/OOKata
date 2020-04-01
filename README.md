@@ -3,7 +3,7 @@
 
 Dave Thomas borrwed the term from Martial Arts glossary into programming. Robert Martin (AKA Uncle Bob) frequently uses this term to mean a programming practice problem.
 
-# OO Problem Catalog
+# About
 This repository's [issue tracker](https://github.com/iut-cse/oo-problem-catalog/issues) is used as Object Oriented Problem Catalog. **Watch** the repository to get updates, **star** it to make it popular.
 
 ### Quick Links
