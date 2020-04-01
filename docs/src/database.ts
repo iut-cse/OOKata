@@ -39,6 +39,7 @@ class Database {
             p.labels.forEach(l => l.problems.push(p));
 
             p.author = authorMap[p.authorHandle];
+            p.author.problems.push(p);
             p.author.reactions.merge(p.reactions);
         });
     }
