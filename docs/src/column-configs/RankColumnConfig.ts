@@ -1,5 +1,5 @@
-import { resolveAsText } from "../html-resolvers/simple-text-html-resolver";
-import { TableColumnConfig } from "./table-column-config";
+import { resolveAsText } from "../html-resolvers/resolveAsText";
+import { TableColumnConfig } from "./TableColumnConfig";
 export class RankColumnConfig implements TableColumnConfig<any> {
     constructor(public headerHtml = "#") {
     }

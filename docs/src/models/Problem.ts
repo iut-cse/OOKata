@@ -5,23 +5,26 @@ import { Reactions } from "./Reactions";
 import { Label } from "./Label";
 export class Problem {
     number: number;
-    htmlUrl: string;
+    url: string;
     title: string;
-    state: "open" | "closed";
-    comments: number;
-    createdAt: string;
+    labelNames: string[];
     labels: Label[];
     reactions: Reactions;
+    authorHandle: string;
     author: Author;
+    commentCount: number;
+    commitCount: number;
+
 
     constructor(issue: RawIssue) {
         this.number = issue.number;
-        this.htmlUrl = issue.html_url;
+        this.url = issue.url;
         this.title = issue.title;
-        this.state = issue.state;
-        this.comments = issue.comments;
-        this.createdAt = issue.created_at;
+        this.authorHandle = issue.author.login;
+        this.commentCount = issue.comments.totalCount;
+        this.commitCount = issue.timelineItems.totalCount;
+        this.labelNames = issue.labels.nodes.map(rl => rl.name);
         this.labels = [];
-        this.reactions = new Reactions(issue.reactions);
+        this.reactions = new Reactions(issue.reactionGroups);
     }
 }

@@ -1,36 +1,39 @@
-import { RawReactions } from './raw/RawReactions'
+import { RawReaction, ReactionType } from './raw/RawReactions'
+import { invert, each } from 'lodash';
 
-const reactionKeys = [
-    "+1",
-    "-1",
-    "confused",
-    "eyes",
-    "heart",
-    "hooray",
-    "laugh",
-    "rocket"
-]
+const propertyToReactionType: { [name: string]: ReactionType } = {
+    "thumbsUp": "THUMBS_UP",
+    "thumbsDown": "THUMBS_DOWN",
+    "confused": "CONFUSED",
+    "eyes": "EYES",
+    "heart": "HEART",
+    "hooray": "HOORAY",
+    "laugh": "LAUGH",
+    "rocket": "ROCKET",
+}
+
+const reactionTypeToProperty = invert(propertyToReactionType);
 
 export class Reactions {
     get score() {
-        return this["+1"] - this["-1"];
+        return this.thumbsUp - this.thumbsDown;
     }
-    "+1": number;
-    "-1": number;
-    confused: number;
-    eyes: number;
-    heart: number;
-    hooray: number;
-    laugh: number;
-    rocket: number;
+    thumbsUp: number = 0;
+    thumbsDown: number = 0;
+    confused: number = 0;
+    eyes: number = 0;
+    heart: number = 0;
+    hooray: number = 0;
+    laugh: number = 0;
+    rocket: number = 0;
 
-    constructor(reactions: RawReactions | {} = {}) {
-        reactionKeys.forEach(key => {
-            this[key] = reactions[key] || 0;
+    constructor(reactions: RawReaction[]) {
+        each(reactions, r => {
+            this[reactionTypeToProperty[r.content]] += r.users.totalCount;
         });
     }
 
     merge(otherReactions: Reactions): void {
-        reactionKeys.forEach(key => this[key] += otherReactions[key]);
+        each(Object.keys(propertyToReactionType), prop => this[prop] += otherReactions[prop]);
     }
 }

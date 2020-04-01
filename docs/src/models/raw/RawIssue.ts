@@ -1,14 +1,17 @@
-import { RawReactions } from "./RawReactions";
+import { RawReaction } from "./RawReactions";
 import { RawUser } from "./RawUser";
 import { RawLabel } from "./RawLabel";
+import { RawTotalCount } from "./RawTotalCount";
+
 export interface RawIssue {
     number: number;
-    html_url: string;
     title: string;
-    state: "open" | "closed";
-    comments: number;
-    created_at: string;
-    user: RawUser;
-    labels: RawLabel[];
-    reactions: RawReactions;
+    url: string;
+    comments: RawTotalCount;
+    author: RawUser;
+    labels: {
+        nodes: RawLabel[]
+    };
+    reactionGroups: RawReaction[];
+    timelineItems: RawTotalCount
 }

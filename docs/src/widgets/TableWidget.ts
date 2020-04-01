@@ -1,15 +1,11 @@
-import { Widget } from "./widget";
-import { TableColumnConfig } from "../column-configs/table-column-config";
-import * as $ from 'jquery';
+import * as $ from "jquery";
+import { Widget } from "./Widget";
+import { TableColumnConfig } from "../column-configs/TableColumnConfig";
 
 export abstract class TableWidget<TData> extends Widget {
-    constructor(
-        protected id: string,
-        protected title: string,
-        private columns: TableColumnConfig<TData>[]) {
+    constructor(protected id: string, protected title: string, private columns: TableColumnConfig<TData>[]) {
         super(id, title);
     }
-
     buildBodyContent(): string | JQuery<HTMLElement> {
         let $table = $("<table>")
             .addClass("table table-striped table-sm table-hover");
@@ -17,7 +13,6 @@ export abstract class TableWidget<TData> extends Widget {
         this.columns.forEach(col => {
             $headerRow.append($("<th>").html(col.headerHtml));
         });
-
         let $tbody = $("<tbody>").appendTo($table);
         let dataList = this.loadData();
         dataList.forEach((rowData, rowIndex) => {
@@ -27,9 +22,7 @@ export abstract class TableWidget<TData> extends Widget {
                 $row.append($("<td>").append(content));
             });
         });
-
         return $table;
     }
-
     abstract loadData(): TData[];
 }

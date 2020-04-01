@@ -1,11 +1,15 @@
-export interface RawReactions {
-    total_count: number;
-    "+1": number;
-    "-1": number;
-    laugh: number;
-    hooray: number;
-    confused: number;
-    heart: number;
-    rocket: number;
-    eyes: number;
+import { RawTotalCount } from "./RawTotalCount";
+
+export interface RawReaction {
+    content: ReactionType;
+    users: RawTotalCount;
 }
+
+export type ReactionType = "THUMBS_UP" |
+    "THUMBS_DOWN" |
+    "LAUGH" |
+    "HOORAY" |
+    "CONFUSED" |
+    "HEART" |
+    "ROCKET" |
+    "EYES";

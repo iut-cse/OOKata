@@ -1,5 +1,4 @@
-import { RawUser } from "../models/raw/RawUser";
-import * as $ from 'jquery';
+import * as $ from "jquery";
 import { Author } from "../models/Author";
 
 export function resolveUserHtml(user: Author) {
@@ -8,16 +7,13 @@ export function resolveUserHtml(user: Author) {
         .attr("width", 24)
         .attr("alt", user.handle)
         .addClass("avatar");
-
     let $name = $("<a>")
         .attr("href", user.htmlUrl)
         .attr("target", "blank")
         .html(user.handle);
-
     let $fullContent = $("<div>")
         .addClass("user")
         .append($avatar)
         .append($name);
-
     return $fullContent;
 }

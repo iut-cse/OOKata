@@ -1,6 +1,6 @@
-import { Label } from "../models/Label";
 import * as $ from "jquery";
-import { Color } from "../utils/color";
+import { Label } from "../models/Label";
+import { Color } from "../utils/Color";
 
 export function resolveLabelHtml(label: Label): JQuery {
     let textColor = Color.fromHex(label.color).contrast().toRgbString();
@@ -10,6 +10,5 @@ export function resolveLabelHtml(label: Label): JQuery {
         .css("background-color", `#${label.color}`)
         .css("color", textColor)
         .attr("title", label.description);
-
     return $label;
 }
