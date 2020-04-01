@@ -1,4 +1,9 @@
-# OO Problem Catalog
+**Change of Repository Name:** The original name of the repository was OO Problem Catalog. The name was too long, so the name has been changed to OO Kata.
+> A [code kata](https://en.wikipedia.org/wiki/Kata_(programming)) is an exercise in programming which helps programmers hone their skills through practice and repetition.
+
+Dave Thomas borrwed the term from Martial Arts glossary into programming. Robert Martin (AKA Uncle Bob) frequently uses this term to mean a programming practice problem.
+
+# About
 This repository's [issue tracker](https://github.com/iut-cse/oo-problem-catalog/issues) is used as Object Oriented Problem Catalog. **Watch** the repository to get updates, **star** it to make it popular.
 
 ### Quick Links
