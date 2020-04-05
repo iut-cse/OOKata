@@ -2,6 +2,7 @@
   "name": "dashboard",
   "version": "1.0.0",
   "description": "dashboard for OO Problem Catalog",
+  "repository": "https://github.com/iut-cse/oo-kata",
   "scripts": {
     "build-d": "webpack --mode development --devtool source-map",
     "build-wd": "webpack --watch --watch-aggregate-timeout=500 --stdin --mode development --devtool source-map",
