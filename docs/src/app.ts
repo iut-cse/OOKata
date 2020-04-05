@@ -4,9 +4,11 @@ import { database } from './Database';
 import { TopAuthorsByScoreWidget } from "./widgets/TopAuthorsByScoreWidget";
 import { TopAuthorsByProblemCountWidget } from "./widgets/TopAuthorsByProblemCountWidget";
 import { TopLabelsWidget } from "./widgets/TopLabelsWidget";
+import { ProblemsWidget } from './widgets/ProblemsWidget';
 
 export function init(fakeData: boolean) {
     const widgets = [
+        new ProblemsWidget(),
         new TopProblemsWidget(),
         new TopAuthorsByScoreWidget(),
         new TopAuthorsByProblemCountWidget(),

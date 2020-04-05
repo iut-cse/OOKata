@@ -62,9 +62,16 @@
         }
     }
 
-    .label {
-        padding: 4px;
-        border-radius: 5px;
-        color: white;
+    .label-list {
+        display: flex;
+        font-size: 80%;
+        .label {
+            padding: 4px;
+            border-radius: 5px;
+            color: white;
+            margin-right: 2px;
+        }
     }
+
+    
 }

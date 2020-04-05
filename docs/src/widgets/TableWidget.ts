@@ -6,7 +6,7 @@ export abstract class TableWidget<TData> extends Widget {
     constructor(protected id: string, protected title: string, private columns: TableColumnConfig<TData>[]) {
         super(id, title);
     }
-    buildBodyContent(): string | JQuery<HTMLElement> {
+    buildBodyContent() : void {
         let $table = $("<table>")
             .addClass("table table-striped table-sm table-hover");
         let $headerRow = $("<tr>").appendTo($("<thead>").appendTo($table));
@@ -22,7 +22,8 @@ export abstract class TableWidget<TData> extends Widget {
                 $row.append($("<td>").append(content));
             });
         });
-        return $table;
+        this.$body.empty();
+        this.$body.append($table);
     }
     abstract loadData(): TData[];
 }
