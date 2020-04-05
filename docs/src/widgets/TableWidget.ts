@@ -38,19 +38,20 @@ export abstract class TableWidget<TData> extends Widget {
         let $headerRow = $("<tr>").appendTo($("<thead>").appendTo(this.$table));
         this.columns.forEach(col => {
             let $th = $("<th>").html(col.headerHtml);
-            $th.click(()=> {
-                if(col.compare !== null){
+            if (col.compare) {
+                $th.addClass("sortable");
+                $th.click(() => {
                     this.sortingColumn = col;
                     this.buildBodyContent();
-                }
-            });
+                });
+            }
             $headerRow.append($th);
         });
     }
 
-    getSortedData(){
+    getSortedData() {
         let dataList = [].concat(this.loadData());
-        if(this.sortingColumn)
+        if (this.sortingColumn)
             dataList.sort(this.sortingColumn.compare);
 
         return dataList;

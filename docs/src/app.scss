@@ -45,6 +45,10 @@
 @import "styles/bootswatch.simplex"; // custom theme
 
 .widget-content {
+    th.sortable {
+        cursor: pointer;
+    }
+
     td {
         vertical-align: middle;
     }
