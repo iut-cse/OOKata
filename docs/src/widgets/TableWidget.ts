@@ -1,15 +1,20 @@
 import * as $ from "jquery";
 import { Widget } from "./Widget";
 import { TableColumnConfig } from "../column-configs/TableColumnConfig";
-import { orderBy, sortBy } from "lodash";
-
 
 export abstract class TableWidget<TData> extends Widget {
     protected $table: JQuery;
-    private sortingColumn: TableColumnConfig<TData>;
+    private sorting: {
+        isDesc: boolean;
+        column: TableColumnConfig<TData>;
+    }
 
     constructor(protected id: string, protected title: string, private columns: TableColumnConfig<TData>[]) {
         super(id, title);
+        this.sorting = {
+            isDesc: true,
+            column: { headerHtml: "", resolveHtml: null, compare: () => 0 }
+        }
     }
     buildBodyContent(): void {
         if (this.$table)
@@ -41,7 +46,12 @@ export abstract class TableWidget<TData> extends Widget {
             if (col.compare) {
                 $th.addClass("sortable");
                 $th.click(() => {
-                    this.sortingColumn = col;
+                    if (this.sorting.column === col) {
+                        this.sorting.isDesc = !this.sorting.isDesc;
+                    } else {
+                        this.sorting.isDesc = false;
+                    }
+                    this.sorting.column = col;
                     this.buildBodyContent();
                 });
             }
@@ -51,9 +61,11 @@ export abstract class TableWidget<TData> extends Widget {
 
     getSortedData() {
         let dataList = [].concat(this.loadData());
-        if (this.sortingColumn)
-            dataList.sort(this.sortingColumn.compare);
-
+        let comp = this.sorting.column.compare;
+        if(this.sorting.isDesc) {
+            comp = (a, b) => -this.sorting.column.compare(a, b);
+        }
+        dataList = dataList.sort(comp);
         return dataList;
     }
     abstract loadData(): TData[];
