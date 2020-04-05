@@ -45,11 +45,13 @@
 @import "styles/bootswatch.simplex"; // custom theme
 
 .widget-content {
+    overflow-y: auto;
     th.sortable {
         cursor: pointer;
 
         .sort-icon {
             float: right;
+            width: 10px;
         }
 
         &.asc {
@@ -84,6 +86,7 @@
 
     .label-list {
         display: flex;
+        flex-flow: row wrap;
         font-size: 80%;
 
         .label {
@@ -91,8 +94,7 @@
             border-radius: 5px;
             color: white;
             margin-right: 2px;
+            margin-bottom: 1px;
         }
     }
-
-
 }

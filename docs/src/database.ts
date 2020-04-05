@@ -37,7 +37,6 @@ class Database {
 
         each(this.problems, p => {
             p.labels = map(p.labelNames, ln => labelMap[ln]);
-            each(p.labelNames, ln => p.labels.push(labelMap[ln]));
             p.labels.forEach(l => l.problems.push(p));
 
             p.author = authorMap[p.authorHandle];
