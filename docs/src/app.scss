@@ -47,6 +47,22 @@
 .widget-content {
     th.sortable {
         cursor: pointer;
+
+        .sort-icon {
+            float: right;
+        }
+
+        &.asc {
+            .sort-icon:after {
+                content: "▲";
+            }
+        }
+
+        &.desc {
+            .sort-icon:after {
+                content: "▼";
+            }
+        }
     }
 
     td {
@@ -69,6 +85,7 @@
     .label-list {
         display: flex;
         font-size: 80%;
+
         .label {
             padding: 4px;
             border-radius: 5px;
@@ -77,5 +94,5 @@
         }
     }
 
-    
+
 }
