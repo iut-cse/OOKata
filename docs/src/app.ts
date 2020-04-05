@@ -1,17 +1,13 @@
 import './app.scss';
-import { TopProblemsWidget } from "./widgets/TopProblemsWidget";
 import { database } from './Database';
-import { TopAuthorsByScoreWidget } from "./widgets/TopAuthorsByScoreWidget";
-import { TopAuthorsByProblemCountWidget } from "./widgets/TopAuthorsByProblemCountWidget";
 import { TopLabelsWidget } from "./widgets/TopLabelsWidget";
 import { ProblemsWidget } from './widgets/ProblemsWidget';
+import { AuthorsWidget } from './widgets/AuthorsWidget';
 
 export function init(fakeData: boolean) {
     const widgets = [
         new ProblemsWidget(),
-        new TopProblemsWidget(),
-        new TopAuthorsByScoreWidget(),
-        new TopAuthorsByProblemCountWidget(),
+        new AuthorsWidget(),
         new TopLabelsWidget(),
     ];
     

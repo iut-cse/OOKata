@@ -27,3 +27,4 @@ export class ProblemsWidget extends TableWidget<Problem> {
         return database.problems;
     }
 }
+
