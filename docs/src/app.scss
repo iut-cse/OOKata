@@ -45,6 +45,7 @@
 @import "styles/bootswatch.simplex"; // custom theme
 
 .widget-content {
+    overflow-y: auto;
     th.sortable {
         cursor: pointer;
 
@@ -96,6 +97,4 @@
             margin-bottom: 1px;
         }
     }
-
-
 }
