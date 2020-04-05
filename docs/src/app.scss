@@ -84,6 +84,7 @@
 
     .label-list {
         display: flex;
+        flex-flow: row wrap;
         font-size: 80%;
 
         .label {
@@ -91,6 +92,7 @@
             border-radius: 5px;
             color: white;
             margin-right: 2px;
+            margin-bottom: 1px;
         }
     }
 

@@ -20,3 +20,4 @@ export class AuthorsWidget extends TableWidget<Author> {
         return database.authors;
     }
 }
+
