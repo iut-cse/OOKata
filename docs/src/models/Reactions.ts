@@ -1,5 +1,5 @@
 import { RawReaction, ReactionType } from './raw/RawReactions'
-import { invert, each } from 'lodash';
+import { invert, each, sum, map } from 'lodash';
 
 const propertyToReactionType: { [name: string]: ReactionType } = {
     "thumbsUp": "THUMBS_UP",
@@ -17,6 +17,17 @@ const reactionTypeToProperty = invert(propertyToReactionType);
 export class Reactions {
     get score() {
         return this.thumbsUp - this.thumbsDown;
+    }
+    get total() {
+        let total = this.thumbsUp
+            + this.thumbsDown
+            + this.confused
+            + this.eyes
+            + this.heart
+            + this.hooray
+            + this.laugh
+            + this.rocket;
+        return total;
     }
     thumbsUp: number = 0;
     thumbsDown: number = 0;

@@ -45,6 +45,26 @@
 @import "styles/bootswatch.simplex"; // custom theme
 
 .widget-content {
+    th.sortable {
+        cursor: pointer;
+
+        .sort-icon {
+            float: right;
+        }
+
+        &.asc {
+            .sort-icon:after {
+                content: "▲";
+            }
+        }
+
+        &.desc {
+            .sort-icon:after {
+                content: "▼";
+            }
+        }
+    }
+
     td {
         vertical-align: middle;
     }
@@ -62,9 +82,17 @@
         }
     }
 
-    .label {
-        padding: 4px;
-        border-radius: 5px;
-        color: white;
+    .label-list {
+        display: flex;
+        font-size: 80%;
+
+        .label {
+            padding: 4px;
+            border-radius: 5px;
+            color: white;
+            margin-right: 2px;
+        }
     }
+
+
 }

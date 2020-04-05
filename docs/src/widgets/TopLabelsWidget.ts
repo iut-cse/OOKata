@@ -9,7 +9,7 @@ export class TopLabelsWidget extends TableWidget<Label> {
     constructor() {
         super("top-labels", "Top Labels", [
             new RankColumnConfig(),
-            { headerHtml: "Label", resolveHtml: label => resolveLabelHtml(label) },
+            { headerHtml: "Label", resolveHtml: label => resolveLabelHtml([label]) },
             { headerHtml: "Problems #", resolveHtml: label => resolveAsText(label.problems.length) },
         ]);
     }

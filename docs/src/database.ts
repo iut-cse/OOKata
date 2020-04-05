@@ -12,7 +12,9 @@ class Database {
     public authors: Author[];
     public labels: Label[];
 
-    private process(rawIssues: RawIssue[]) {
+    private async process(response: Promise<Response>) {
+        let responseJson = await (await response).json();
+        let rawIssues: RawIssue[] = responseJson.data.repository.issues.nodes;
         this.authors = chain(rawIssues)
             .map(ri => ri.author)
             .uniqBy(ra => ra.login)
@@ -22,14 +24,14 @@ class Database {
         this.labels = chain(rawIssues)
             .flatMap(ri => ri.labels.nodes)
             .uniqBy(rl => rl.name)
-            .map(rl=> new Label(rl))
+            .map(rl => new Label(rl))
             .value();
 
         this.problems = map(rawIssues, ri => new Problem(ri));
         this.setupReferenceProperties();
     }
 
-    private setupReferenceProperties(){
+    private setupReferenceProperties() {
         let authorMap = keyBy(this.authors, a => a.handle);
         let labelMap = keyBy(this.labels, l => l.name);
 
@@ -82,16 +84,20 @@ class Database {
     }
     `
     public async loadByGraphQL() {
-        let response = await fetch("https://api.github.com/graphql", {
+        let response = fetch("https://api.github.com/graphql", {
             method: "POST",
             headers: {
                 "Authorization": `token ${localStorage["token"] || defaultAuthToken}`,
             },
             body: JSON.stringify({ query: this.graphQLQuery })
-        }).then(res => res.json());
+        });
 
-        let rawIssues: RawIssue[] = response.data.repository.issues.nodes;
-        this.process(rawIssues);
+        return this.process(response);
+    }
+
+    public async loadFakeData() {
+        let response = fetch("/data/graphql.json");
+        return this.process(response);
     }
 }
 

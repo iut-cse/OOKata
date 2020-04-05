@@ -15,7 +15,6 @@ export class Problem {
     commentCount: number;
     commitCount: number;
 
-
     constructor(issue: RawIssue) {
         this.number = issue.number;
         this.url = issue.url;
