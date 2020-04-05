@@ -3,7 +3,7 @@ import { Author } from "../models/Author";
 
 export function resolveUserHtml(user: Author) {
     let $avatar = $("<img>")
-        .attr("src", user.avatarUrl)
+        .attr("src", `${user.htmlUrl}.png?size=24`)
         .attr("width", 24)
         .attr("alt", user.handle)
         .addClass("avatar");
