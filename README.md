@@ -1,67 +1,47 @@
-**Change of Repository Name:** The original name of the repository was OO Problem Catalog. The name was too long, so the name has been changed to OO Kata.
-> A [code kata](https://en.wikipedia.org/wiki/Kata_(programming)) is an exercise in programming which helps programmers hone their skills through practice and repetition.
+This document is for those who would like to contribute in developing the dashboard. Here is the live dashboard: https://iut-cse.github.io/oo-problem-catalog/.  
 
-Dave Thomas borrwed the term from Martial Arts glossary into programming. Robert Martin (AKA Uncle Bob) frequently uses this term to mean a programming practice problem.
+There is a Glossary at the bottom of this document. Check that if a term seems unclear.
 
-# About
-This repository's [issue tracker](https://github.com/iut-cse/oo-problem-catalog/issues) is used as Object Oriented Problem Catalog. **Watch** the repository to get updates, **star** it to make it popular.
+## Technologies
+1. Languages and Libraries
+   1. TypeScript
+   2. HTML
+   3. SCSS
+   4. JQuery
+   5. Lodash
+2. Build System: WebPack and NPM
+3. Prefered IDE: VSCode
+   1. [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+   2. [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
-### Quick Links
-* [Read this before posting a problem](CONTRIBUTING.md)
-* [Dashboard (development in progress)](http://iut-cse.github.io/oo-problem-catalog)
-* [All problems](https://github.com/iut-cse/oo-problem-catalog/issues)
-  * [Sort by popularity](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc)
-  * [Very easy](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3A%22Very+Easy%22)
-  * [Easy](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3AEasy)
-  * [Medium](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3AMedium)
-  * [Hard](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3AHard)
-  * [Very hard](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3A%22Very+Hard%22)
+## Build and develop
+Several scripts are already given in `package.json` which should be sufficient to build and run the code.
+1. Get the latest code
+   1. If not already cloned: `git clone https://github.com/iut-cse/oo-problem-catalog`
+   2. Or just pull: `git pull`
+2. All development of the dashboard will be done in the `dashboard` branch. Checkout to `dashboard` branch: `git checkout dashboard`.
+3. Open the `docs` folder in VSCode. You should have `package.json`, `webpack.config.js`, `README.md` and some other files and folders in your root directory.
+4. Install all dependencies: `npm install`. You can use the embedded terminal to run all subsequent commands.
+5. Build the system. There are several options:
+   1. Development build: `npm run build-d`.
+   2. (Prefered) Development build with auto rebuild when files are changed: `npm run build-wd`.
+   3. Production build: `npm run build-p`.
+   4. Production build with auto rebuild when files are changed: `npm run build-wp`.
+   Keep your terminal open when using auto rebuild. You can open multiple embedded terminals at the same time. So no worries.
+6. Run: "Live Server" extension will add a "Go Live" button at the bottom-right corner of VSCode. Click that. Page will open in your default browser.
+7. Start Coding!
 
----
-# Contributing
-There are several ways you can contribute:
-### Add/Edit/Close problems
-[See the contributors' guide](CONTRIBUTING.md)
+## Developing Widgets
+The web page is home to some widgets. To develop a widget, you need to create a subtype of `Widget` interface. If developing a table widget, inheriting the abstract `TableWidget` class can be more useful. Check the `app.ts` file to see how a widget is added to the dashboard.  
+Check an existing widget's code to get a better idea.
 
-### Review solutions
-Most problems here cannot be automatically validated. Also, there is no one designated to evaluate the solutions. But we hope that a peer review system will be eshtablished within the community. We expect the following people to review other peoples solutions:
-   - Comments from industry people will be extremely valuable.
-   - Problem creators are possibly the best people to review solutions to the problems they created.
-   - People who gave solution to a problem can review solution of other people.
-   - Anyone else who feels like checking other peoples solution.  
-   Note that by review, we do not mean just leaving comment about the solution. Just asking why this problem is solved this way can be a good source of knowledge.
-   You can check the solutions online or you can build yourself. See [_How to check other people's solutions_](#how-to-check-other-peoples-solutions) below. 
+## List of widgets
+1. **Top Problems** (complete): Shows top 10 problems with most points earned.
+2. **Top Authors by Points** (Assigned to @sadatbs): Shows top 10 problem authors. The ranking is done by total points earned by the author.
+3. **Top Authors by Problem Count** (Not started): Shows top 10 problem authors. The ranking is done by total number of problems created by the author.
 
-### Discuss about the problems
-Each of the problems has a comment thread associated with it. Use it to discuss about the problem. Discussion may include (but not limited to):
-   - Ask for clarification about the problem.
-   - Scope of improvement of the problem description. Better edit the problem yourself, but if you do not feel like editing, comment.
-   - Discussion about the solution is OK. **Do not paste the whole solution**. You can give a link of course. Note that if you follow the recommended way to submit a solution ([described below](#submit-solutions)), it will be automatically tagged with the problem.
-   - Suggest a different difficulty level.
-   - Suggest a different topic tag.
-   - Your feeling about the problem. Does the problem make you nostalgic?
-   - Anything you like to discuss.
+Please feel free to suggest additional widgets.
 
-### Rate the problems
-Rating the problems will help people to identify which problems they should try. GitHub has several _reactions_, amongh which thumbs up is considered +1 and thumbs down in considered -1. These two will be considered as primary means of popularity count. But you can give additional reactions for appreciation. More than one reaction by the same user is supported.
-
-### Submit solutions
-Following is the recommended way to submit a solution.
-   * Create a branch with your GitHub username.
-   * Create a folder int the `/solutions` folder with your GitHub username. If your username is `abdullah`, the folder should be `/solutions/abdullah`.
-   * Write any code in that folder
-   * PUSH ONLY TO YOUR BRANCH. Pull requests to master branch will not be reviewed.
-   * Mention the issue number in your commit. For example, a commit is for solving issue 1, mention #1 somewhere in the commit. It will be lincked to the problem automatically.
-   * For ease of compiling and running your solutions by a reviewer, you should commit with your IDE files. Common ignore list for popular IDEs are already available in the `solutions` folder. Add your additional ignore list within your folder. 
-   * If any of the language above seems unfamiliar to you. Just commit and push. You cannot do much harm anyway and no one is going to be mad on you about anything.
-
----
-## How to check other people's solutions
-Simplest way to see other people's solutions is to see their branch's code online. However, if you want to build and run their code, you should do the followings:
-* Clone/pull the repository.
-* Checkout to their branch and the code will be their.
-* Please DO NOT COMMIT TO OTHER PEOPLE'S BRANCH.
-
-Note that popular solution providers' branches will be merged to master time to time. Check the `solutions` folder for that.
-
-
+## Glossary
+* Point: Difference between _thumbs up_ and _thumbs down_ reactions.
+* Widget: A part of the web page where a certain data is visualized.
