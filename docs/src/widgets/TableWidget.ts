@@ -20,7 +20,7 @@ export abstract class TableWidget<TData> extends Widget {
     }
     buildBodyContent(): void {
         this.$table = $("<table>")
-            .addClass("table table-striped table-sm table-hover");
+            .addClass("table table-striped table-bordered table-sm table-hover");
 
         this.buildTableHeader();
         this.buildTableBody();

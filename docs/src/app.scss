@@ -50,19 +50,22 @@
         cursor: pointer;
 
         .sort-icon {
-            float: right;
             width: 10px;
+            float: right;
+            &:after{
+               content: "⯁";
+            }
         }
 
         &.asc {
             .sort-icon:after {
-                content: "▲";
+                content: "🞁";
             }
         }
 
         &.desc {
             .sort-icon:after {
-                content: "▼";
+                content: "🞃";
             }
         }
     }
