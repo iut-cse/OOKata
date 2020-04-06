@@ -44,21 +44,31 @@
 
 @import "styles/bootswatch.simplex"; // custom theme
 
+$fixed-nav-hight: 50px;
 .inner-container {
-    margin-top: 60px; // for covering up the fixed nav
+    margin-top: $fixed-nav-hight; // for covering up the fixed nav
     margin-bottom: 20px;
+}
+
+.anchor-target::before {
+    content: "";
+    display: block;
+    height: $fixed-nav-hight; // fixed header height
+    margin: -$fixed-nav-hight 0 0; // negative fixed header height 
 }
 
 .widget-content {
     overflow-y: auto;
+
     th.sortable {
         cursor: pointer;
 
         .sort-icon {
             width: 10px;
             float: right;
-            &:after{
-               content: "⯁";
+
+            &:after {
+                content: "⯁";
             }
         }
 
