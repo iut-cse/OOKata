@@ -21,8 +21,8 @@
 //@import "~bootstrap/scss/button-group";
 //@import "~bootstrap/scss/input-group";
 //@import "~bootstrap/scss/custom-forms";
-//@import "~bootstrap/scss/nav";
-//@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
 @import "~bootstrap/scss/card";
 //@import "~bootstrap/scss/breadcrumb";
 //@import "~bootstrap/scss/pagination";
@@ -43,6 +43,11 @@
 //@import "~bootstrap/scss/print";
 
 @import "styles/bootswatch.simplex"; // custom theme
+
+.inner-container {
+    margin-top: 60px; // for covering up the fixed nav
+    margin-bottom: 20px;
+}
 
 .widget-content {
     overflow-y: auto;

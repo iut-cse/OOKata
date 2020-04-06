@@ -11,17 +11,38 @@
 </head>
 
 <body>
+    
     <div class="container-fluid">
-        <div class="py-2">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link py-1"
+                       href="#problems">Problems</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-1"
+                       href="#authors">Authors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-1"
+                       href="#labels">Labels</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="inner-container">
             <div class="row">
                 <div class="col"
-                     data-widget-id="problems"></div>
+                     data-widget-id="problems"
+                     id="problems"></div>
             </div>
             <div class="row">
                 <div class="col-lg-8 mt-3"
-                     data-widget-id="authors"></div>
+                     data-widget-id="authors"
+                     id="authors"></div>
                 <div class="col-lg-4 mt-3"
-                     data-widget-id="labels"></div>
+                     data-widget-id="labels"
+                     id="labels"></div>
             </div>
         </div>
     </div>
