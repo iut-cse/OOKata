@@ -50,11 +50,16 @@ $fixed-nav-hight: 50px;
     margin-bottom: 20px;
 }
 
-.anchor-target::before {
-    content: "";
-    display: block;
-    height: $fixed-nav-hight; // fixed header height
-    margin: -$fixed-nav-hight 0 0; // negative fixed header height 
+
+.anchor-target {
+    visibility: hidden;
+
+    &::before {
+        content: "";
+        display: block;
+        height: $fixed-nav-hight; // fixed header height
+        margin: -$fixed-nav-hight 0 0; // negative fixed header height 
+    }
 }
 
 .widget-content {
