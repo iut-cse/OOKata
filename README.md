@@ -47,13 +47,17 @@ Rating the problems will help people to identify which problems they should try.
 
 ### Submit solutions
 Following is the recommended way to submit a solution.
-   * Create a branch with your GitHub username.
-   * Create a folder int the `/solutions` folder with your GitHub username. If your username is `abdullah`, the folder should be `/solutions/abdullah`.
-   * Write any code in that folder
-   * PUSH ONLY TO YOUR BRANCH. Pull requests to master branch will not be reviewed.
-   * Mention the issue number in your commit. For example, a commit is for solving issue 1, mention #1 somewhere in the commit. It will be lincked to the problem automatically.
-   * For ease of compiling and running your solutions by a reviewer, you should commit with your IDE files. Common ignore list for popular IDEs are already available in the `solutions` folder. Add your additional ignore list within your folder. 
-   * If any of the language above seems unfamiliar to you. Just commit and push. You cannot do much harm anyway and no one is going to be mad on you about anything.
+* Clone the repository in your machine  
+  ```git clone https://github.com/iut-cse/oo-kata```
+* Create a branch with your GitHub username.   
+  ```git branch {your-github-username}```
+* Create a folder int the `/solutions` folder with your GitHub username. If your username is `abdullah`, the folder should be `/solutions/abdullah`.
+* Write any code in that folder
+* PUSH ONLY TO YOUR BRANCH. Pull requests to master branch will not be reviewed.
+* Mention the issue number in your commit. For example, a commit is for solving issue 1, mention #1 somewhere in the commit. It will be lincked to the problem automatically.
+* For ease of compiling and running your solutions by a reviewer, you should commit with your IDE files. Common ignore list for popular IDEs are already available in the `solutions` folder. Add your additional ignore list within your folder. 
+* If any of the language above seems unfamiliar to you. Just commit and push. You cannot do much harm anyway and no one is going to be mad on you about anything.
+
 
 ---
 ## How to check other people's solutions
