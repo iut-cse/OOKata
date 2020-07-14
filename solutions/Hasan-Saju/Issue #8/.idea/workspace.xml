@@ -39,7 +39,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="JUnit.ShapeListTest">
+  <component name="RunManager" selected="JUnit.ShapeListTest.testAll">
     <configuration name="ShapeListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Issue #8" />
       <option name="PACKAGE_NAME" value="" />
@@ -61,8 +61,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ShapeListTest" />
         <item itemvalue="JUnit.ShapeListTest.testAll" />
+        <item itemvalue="JUnit.ShapeListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -79,7 +79,8 @@
       <workItem from="1594623782844" duration="3671000" />
       <workItem from="1594628761536" duration="856000" />
       <workItem from="1594638093620" duration="908000" />
-      <workItem from="1594710556810" duration="1957000" />
+      <workItem from="1594710556810" duration="2130000" />
+      <workItem from="1594722823058" duration="3100000" />
     </task>
     <servers />
   </component>
@@ -87,30 +88,30 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="56" key="#com.intellij.ide.util.MemberChooser" timestamp="1594710961336">
+    <state x="446" y="56" key="#com.intellij.ide.util.MemberChooser" timestamp="1594725916155">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="56" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1594710961336" />
+    <state x="446" y="56" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1594725916155" />
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1594624567321">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594624567321" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1594712508354">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1594726942472">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594712508354" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1594712508354">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594726942472" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1594726942472">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594712508354" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1594712508354">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594726942472" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1594726942472">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594712508354" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1594712508354">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594726942472" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1594726942472">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594712508354" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594726942472" />
     <state x="376" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1594623898522">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
