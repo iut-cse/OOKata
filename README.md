@@ -1,8 +1,14 @@
-# OO Problem Catalog
+**Change of Repository Name:** The original name of the repository was OO Problem Catalog. The name was too long, so the name has been changed to OO Kata.
+> A [code kata](https://en.wikipedia.org/wiki/Kata_(programming)) is an exercise in programming which helps programmers hone their skills through practice and repetition.
+
+Dave Thomas borrwed the term from Martial Arts glossary into programming. Robert Martin (AKA Uncle Bob) frequently uses this term to mean a programming practice problem.
+
+# About
 This repository's [issue tracker](https://github.com/iut-cse/oo-problem-catalog/issues) is used as Object Oriented Problem Catalog. **Watch** the repository to get updates, **star** it to make it popular.
 
 ### Quick Links
 * [Read this before posting a problem](CONTRIBUTING.md)
+* [Dashboard (development in progress)](http://iut-cse.github.io/oo-problem-catalog)
 * [All problems](https://github.com/iut-cse/oo-problem-catalog/issues)
   * [Sort by popularity](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc)
   * [Very easy](https://github.com/iut-cse/oo-problem-catalog/issues?q=is%3Aopen+is%3Aissue+label%3A%22Very+Easy%22)
@@ -41,13 +47,17 @@ Rating the problems will help people to identify which problems they should try.
 
 ### Submit solutions
 Following is the recommended way to submit a solution.
-   * Create a branch with your GitHub username.
-   * Create a folder int the `/solutions` folder with your GitHub username. If your username is `abdullah`, the folder should be `/solutions/abdullah`.
-   * Write any code in that folder
-   * PUSH ONLY TO YOUR BRANCH. Pull requests to master branch will not be reviewed.
-   * Mention the issue number in your commit. For example, a commit is for solving issue 1, mention #1 somewhere in the commit. It will be lincked to the problem automatically.
-   * For ease of compiling and running your solutions by a reviewer, you should commit with your IDE files. Common ignore list for popular IDEs are already available in the `solutions` folder. Add your additional ignore list within your folder. 
-   * If any of the language above seems unfamiliar to you. Just commit and push. You cannot do much harm anyway and no one is going to be mad on you about anything.
+* Clone the repository in your machine  
+  ```git clone https://github.com/iut-cse/oo-kata```
+* Create a branch with your GitHub username.   
+  ```git branch {your-github-username}```
+* Create a folder int the `/solutions` folder with your GitHub username. If your username is `abdullah`, the folder should be `/solutions/abdullah`.
+* Write any code in that folder
+* PUSH ONLY TO YOUR BRANCH. Pull requests to master branch will not be reviewed.
+* Mention the issue number in your commit. For example, a commit is for solving issue 1, mention #1 somewhere in the commit. It will be lincked to the problem automatically.
+* For ease of compiling and running your solutions by a reviewer, you should commit with your IDE files. Common ignore list for popular IDEs are already available in the `solutions` folder. Add your additional ignore list within your folder. 
+* If any of the language above seems unfamiliar to you. Just commit and push. You cannot do much harm anyway and no one is going to be mad on you about anything.
+
 
 ---
 ## How to check other people's solutions
