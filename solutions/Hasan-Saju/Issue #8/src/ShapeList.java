@@ -3,19 +3,19 @@ class ShapeList {
 
     public double totalPerimeter() {
         double total = 0;
-        for (int i = 0; i < shapes.length; i++)
+        for (int i = 0; i < shapes.length; i++) {
 
             total += shapes[i].getPerimeter();
-
+        }
         return total;
     }
 
     public double totalArea() {
         double total = 0;
-       for (int i = 0; i < shapes.length; i++)
+       for (int i = 0; i < shapes.length; i++) {
 
-            total += shapes[i].getArea();
-
+           total += shapes[i].getArea();
+       }
         return total;
     }
 
