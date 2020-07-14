@@ -1,5 +1,10 @@
 public class Circle implements Shape {
 
+    /*double radius;
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }*/
+
     @Override
     public double getPerimeter(double radius)
     {

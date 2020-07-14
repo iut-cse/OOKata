@@ -1,20 +1,17 @@
 class ShapeList {
     public double[] sizes;
     public String[] types;
+    Shape shape;
 
-    Square square = new Square();
-    Circle circle = new Circle();
 
     public double totalPerimeter() {
         double total = 0;
         for (int i = 0; i < sizes.length; i++) {
 
-            if ( check(types[i]) )
-                total += square.getPerimeter(sizes[i]);
-            else
-                total += circle.getPerimeter(sizes[i]);
-        }
+            shape=getShape(types[i]);
+            total += shape.getPerimeter(sizes[i]);
 
+        }
         return total;
     }
 
@@ -22,20 +19,22 @@ class ShapeList {
         double total = 0;
         for (int i = 0; i < sizes.length; i++) {
 
-            if ( check(types[i]) )
-                total += square.getArea(sizes[i]);
-            else
-                total += circle.getArea(sizes[i]);
-        }
+            shape=getShape(types[i]);
+            total += shape.getArea(sizes[i]);
 
+        }
         return total;
     }
 
-    public boolean check(String shape)
+
+    private Shape getShape(String objectType)
     {
-        if(shape=="square")
-            return true;
+        Shape shape;
+        if(objectType=="square")
+            shape = new Square() ;
         else
-            return false;
+            shape = new Circle();
+        return  shape;
     }
+
 }
