@@ -1,10 +1,5 @@
 public class Square implements Shape{
 
-  /*  double length;
-    public Square(double length) {
-        this.length=length;
-    }*/
-
     @Override
     public double getPerimeter(double length) {
         double perimeter=4*length;
