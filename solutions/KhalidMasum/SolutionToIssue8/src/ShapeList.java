@@ -1,3 +1,4 @@
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -35,21 +36,17 @@ public class ShapeList {
     }
 
 
-    private double calculateTotalPerimeter() {
+    private void calculateTotalPerimeter() {
         for (Shape value : shape) {
             totalPerimeter += value.getPerimeter();
         }
-        return totalPerimeter;
-
     }
 
-    private double calculateTotalArea() {
 
-
+    private void calculateTotalArea() {
         for (Shape value : shape) {
             totalArea += value.getArea();
         }
-        return totalArea;
     }
 }
 
