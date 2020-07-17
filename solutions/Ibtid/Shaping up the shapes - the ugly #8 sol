@@ -2,10 +2,6 @@
 
 
 public abstract class Shape {
-    double sizes[];
-    Shape(double sizes[]){
-        this.sizes=sizes;
-    }
     abstract double totalPerimeter();
     abstract double totalArea();
 }
