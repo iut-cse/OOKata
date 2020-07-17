@@ -8,8 +8,8 @@ public class ShapeList {
     private double totalArea = 0;
     private int totalNumberOfShapes = 0;
 
-    ShapeList(int size) {
-        shape = new Shape[size];
+    ShapeList(int maxSize) {
+        shape = new Shape[maxSize];
     }
 
     void addShape(Shape shape) {
