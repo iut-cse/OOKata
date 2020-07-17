@@ -1,0 +1,63 @@
+package Shapes;
+
+public interface Shape {
+    double Perimetre();
+    double Area();
+
+}
+
+public class Square implements Shape {
+    private  double length;
+
+    Square(double length){
+        this.length=length;
+    }
+
+    @Override
+    public double Area() {
+        return length*length;
+    }
+
+    @Override
+    public double Perimetre() {
+        return 4*length;
+    }
+}
+
+public class Circle implements Shape {
+    double radius;
+    public Circle(double radius){
+        this.radius=radius;
+    }
+
+    @Override
+    public double Area() {
+        return radius*radius*3.14;
+    }
+
+    @Override
+    public double Perimetre() {
+        return 2*radius*3.14;
+    }
+}
+
+public class ShapeList {
+    public double[] Sizes;
+    public String[] Types;
+
+    double totalPerimetre=0;
+    double totalArea=0;
+
+    public void sum(){
+        for (int i=0; i<Sizes.length; i++){
+            Shape shape= null;
+            if (Types[i] == "square")
+                shape= new Square ( Sizes[i] );
+            else if (Types[i] == "Circle")
+                shape= new Circle ( Sizes[i] );
+            totalArea=totalArea+shape.Area ();
+            totalPerimetre=totalPerimetre+shape.Perimetre ();
+        }
+    }
+}
+
