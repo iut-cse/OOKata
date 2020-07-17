@@ -1,16 +1,15 @@
-public class Circle implements Shape{
-    public double size;
-//    public Circle(double size) {
-//        this.size = size;
-//    }
+import java.nio.channels.Pipe;
 
-    public void setSize(double size) {
-        this.size = size;
+public class Circle implements Shape{
+    double radius;
+    static double PIE = 3.1416;
+    public Circle(double radius) {
+        this.radius = radius;
     }
-    public double perimeter(){
-        return 2*3.1416*size;
+    public double getPerimeter(){
+        return 2 * PIE * radius;
     }
-    public double area(){
-        return 3.1416 * size * size;
+    public double getArea(){
+        return PIE * radius * radius;
     }
 }

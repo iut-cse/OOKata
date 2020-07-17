@@ -1,30 +1,28 @@
 class ShapeList {
     public double[] sizes;
     public String[] types;
-
+    public Shape[] shapes;
     public double totalPerimeter=0;
     public double totalArea=0;
     public Shape shape;
-    public Shape createShape(String type){
-        if (type.equals("square"))
-            shape = new Square();
-        else if (type.equals("circle"))
-            shape = new Circle();
-        return  shape;
+    public void createShape(){
+        for (int i=0;i<sizes.length;i++){
+            if (types[i].equals("square"))
+                shape = new Square(sizes[i]);
+            else if (types[i].equals("circle"))
+                shape = new Circle(sizes[i]);
+            shapes[i] = shape;
+        }
     }
     public double getTotalArea(){
         for (int i=0;i<sizes.length;i++) {
-            Shape shape = createShape(types[i]);
-            shape.setSize(sizes[i]);
-            totalArea += shape.area();
+            totalArea += shapes[i].getArea();
         }
         return  totalArea;
     }
     public double getTotalPerimeter(){
         for (int i=0;i<sizes.length;i++) {
-            Shape shape = createShape(types[i]);
-            shape.setSize(sizes[i]);
-            totalPerimeter += shape.perimeter();
+            totalPerimeter += shapes[i].getPerimeter();
         }
         return  totalPerimeter;
     }

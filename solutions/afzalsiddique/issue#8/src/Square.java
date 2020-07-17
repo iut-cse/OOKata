@@ -1,16 +1,12 @@
 public class Square implements Shape{
-    public double size;
-    //    Square(double size)
-//    {
-//        this.size = size;
-//    }
-    public void setSize(double size) {
-        this.size = size;
+    double length;
+    Square(double length){
+        this.length = length;
     }
-    public double perimeter(){
-        return 4*size;
+    public double getPerimeter(){
+        return 4*length;
     }
-    public double area(){
-        return size*size;
+    public double getArea(){
+        return length*length;
     }
 }
