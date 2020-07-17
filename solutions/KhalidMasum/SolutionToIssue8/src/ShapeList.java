@@ -12,7 +12,7 @@ public class ShapeList {
         shape = new Shape[maxSize];
     }
 
-    void addShape(Shape shape) {
+    public void addShape(Shape shape) {
         this.shape[totalNumberOfShapes] = shape;
         totalNumberOfShapes++;
         calculateTotalPerimeter();
@@ -22,7 +22,6 @@ public class ShapeList {
     public double getTotalPerimeter() {
         return totalPerimeter;
     }
-
 
     public double getTotalArea() {
         return totalArea;
@@ -35,7 +34,6 @@ public class ShapeList {
     private void calculateTotalPerimeter() {
         totalPerimeter += shape[getLastInsertionPosition()].getPerimeter();
     }
-
 
     private void calculateTotalArea() {
         totalArea += shape[getLastInsertionPosition()].getArea();
