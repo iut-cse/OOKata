@@ -5,12 +5,16 @@ import org.junit.jupiter.api.Test;
 public class ShapeList {
 
 
-    Shape[] shape;
-    double totalPerimeter = 0;
-    double totalArea = 0;
+    private Shape[] shape;
+    private double totalPerimeter = 0;
+    private double totalArea = 0;
 
     public void setShapeTypeAndSize(String[] types, double[] sizes) {
         shape = new Shape[types.length];
+        createShapeAndInsertValues(types, sizes);
+    }
+
+    private void createShapeAndInsertValues(String[] types, double[] sizes) {
         for (int i = 0; i < types.length; i++) {
             createShape(types[i], sizes[i], i);
         }
