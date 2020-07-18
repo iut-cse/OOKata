@@ -1,5 +1,6 @@
 public class Circle implements Shape {
-    double radius;
+
+    private double radius;
 
 
     Circle(double radius) {
