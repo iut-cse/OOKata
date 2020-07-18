@@ -1,6 +1,7 @@
 public class Square implements Shape {
-    short NUMBER_OF_ARMS = 4;
-    double sizeOfOneArm;
+
+    private short NUMBER_OF_ARMS = 4;
+    private double sizeOfOneArm;
 
     Square(double sizeOfOneArm) {
         this.sizeOfOneArm = sizeOfOneArm;
