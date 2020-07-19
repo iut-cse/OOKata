@@ -15,7 +15,7 @@ public class ShapeList {
     }  public double getTotalPerimeter(){
         double perimeter=0;
          for (int i = 0; i < shapeList.size(); i++) {
-            perimeter+=shapeList.get(i).getArea();
+            perimeter+=shapeList.get(i).getPerimeter();
         }
         return perimeter;
     }
