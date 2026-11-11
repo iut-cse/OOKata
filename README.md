@@ -1,4 +1,3 @@
-**Change of Repository Name:** The original name of the repository was OO Problem Catalog. The name was too long, so we changed it to OO Kata.
 > A [code kata](https://en.wikipedia.org/wiki/Kata_(programming)) is an exercise in programming which helps programmers hone their skills through practice and repetition.
 
 Dave Thomas borrwed the term from Martial Arts glossary into programming. Robert Martin (AKA Uncle Bob) frequently uses this term to mean a programming practice problem.
