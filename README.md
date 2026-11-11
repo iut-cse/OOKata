@@ -47,23 +47,6 @@ Rating the problems will help people to identify which problems they should try.
 
 ### Submit solutions
 We recommend the following way to submit a solution.
-* Clone the repository in your machine  
-  ```git clone https://github.com/iut-cse/oo-kata```
-* Create a branch with your GitHub username.   
-  ```git branch {your-github-username}```
-* Create a folder int the `/solutions` folder with your GitHub username. If your username is `abdullah`, the folder should be `/solutions/abdullah`.
-* Write any code in that folder
-* PUSH ONLY TO YOUR BRANCH. Reviewers will not review pull requests to master branch.
-* Mention the issue number in your commit. For example, a commit is for solving issue 1, mention #1 somewhere in the commit. GitHub will automatically link it to the problem.
-* For ease of compiling and running your solutions by a reviewer, you should commit with your IDE files. The `solutions` folder already includes common ignore lists for popular IDEs. Add your additional ignore list within your folder. 
-* If any of the language above seems unfamiliar to you. Just commit and push. You cannot do much harm anyway and no one is going to be mad on you about anything.
+* Fork this repository to your GitHub account. You can do it by clicking the **Fork** button on the top right corner of this page.
+* Commit and push your solution to your forked repository. In the commit message ALWAYS tag the issue number. For example, if you are solving issue number 33, an example commit message can be "Solution to problem #33". GitHub will automatically link the commit to the issue.
 
-
----
-## How to check other people's solutions
-Simplest way to see other people's solutions is to see their branch's code online. However, if you want to build and run their code, you should do the followings:
-* Clone/pull the repository.
-* Checkout to their branch and you will find the code there.
-* Please DO NOT COMMIT TO OTHER PEOPLE'S BRANCH.
-
-Note that maintainers will merge popular solution providers' branches to master from time to time. Check the `solutions` folder for that.
